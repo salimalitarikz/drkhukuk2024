@@ -5,6 +5,7 @@
 @import url("f/r/style.css");
 
 
+
 .font_def{
     font-family: "Poppins", sans-serif;
 }
@@ -21,6 +22,7 @@
 
 $background: #fff2df;
 $light:#eeeeee;
+$opacity_1: #c7b9a577;
 
 body{
     background-color: $background;
@@ -106,9 +108,69 @@ nav{
             >#index_part_1_img{
                 position: absolute;
                 right: -20%;
+                z-index: 2;
 
                 >img{
                     height: 80vh;
+                }
+            }
+
+            >#index_part_1_block{
+                width: 85vw;
+                aspect-ratio: 1/1.1;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-60%);
+                border: 5px solid $opacity_1;
+                border-radius: 5px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                >#index_part_1_block_upper{
+                    display: flex;
+                    gap: 1rem;
+                    transform: translateY(-110%);
+
+                    >div{
+                        display: flex;
+                        flex-direction: column;
+                        >span{
+                            line-height: 110%;
+                            font-size: .7rem;
+                        }
+
+                        >span:nth-child(1){
+                            @extend .font_head;
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+
+                >#index_part_1_block_lower{
+                    transform:translateX(-1rem) translateY(110%);
+                    >div{
+                        display: flex;
+                        align-items: center;
+                        
+                        >span{
+                            font-size: .7rem;
+                            >ion-icon{
+                                font-size: 2rem;
+                                // --ionicon-stroke-width: 310px !important;
+                                
+                                path{
+                                    stroke-width: 10;
+                                }
+                                
+
+                            }
+                        }
+                    }
+
                 }
             }
            

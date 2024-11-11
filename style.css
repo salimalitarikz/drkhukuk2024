@@ -4,7 +4,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.font_head, nav > #nav_left > span, h1, h2 {
+.font_head, #index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper > div > span:nth-child(1), nav > #nav_left > span, h1, h2 {
   font-family: "Rob", sans-serif;
 }
 
@@ -86,7 +86,54 @@ nav > #menu_button > ion-icon {
 #index_main #index_part_1 > #index_part_1_content > #index_part_1_img {
   position: absolute;
   right: -20%;
+  z-index: 2;
 }
 #index_main #index_part_1 > #index_part_1_content > #index_part_1_img > img {
   height: 80vh;
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_block {
+  width: 85vw;
+  aspect-ratio: 1/1.1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-60%);
+  border: 5px solid rgba(199, 185, 165, 0.4666666667);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper {
+  display: flex;
+  gap: 1rem;
+  transform: translateY(-110%);
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper > div {
+  display: flex;
+  flex-direction: column;
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper > div > span {
+  line-height: 110%;
+  font-size: 0.7rem;
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper > div > span:nth-child(1) {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_lower {
+  transform: translateX(-1rem) translateY(110%);
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_lower > div {
+  display: flex;
+  align-items: center;
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_lower > div > span {
+  font-size: 0.7rem;
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_lower > div > span > ion-icon {
+  font-size: 2rem;
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_lower > div > span > ion-icon path {
+  stroke-width: 10;
 }/*# sourceMappingURL=style.css.map */

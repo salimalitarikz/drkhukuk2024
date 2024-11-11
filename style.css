@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("f/r/style.css");
+.font_def, * {
+  font-family: "Poppins", sans-serif;
+}
+
+.font_head, nav > #nav_left > span, h1, h2 {
+  font-family: "Rob", sans-serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,5 +15,78 @@
 }
 
 body {
-  background-color: #ffeed6;
+  background-color: #fff2df;
+}
+
+h1, h2 {
+  font-weight: 500;
+}
+
+button {
+  border: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+nav > #nav_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 100%;
+}
+nav > #nav_left > span:nth-child(1) {
+  font-size: 1.6rem;
+}
+nav > #menu_button {
+  height: 3rem;
+  aspect-ratio: 1/1;
+  background-color: #2d1c00;
+  color: #eeeeee;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav > #menu_button > ion-icon {
+  font-size: 1.7rem;
+}
+
+#index_main {
+  overflow: hidden;
+  min-height: 150vh;
+  padding: 0.5rem;
+}
+#index_main #index_part_1 {
+  height: 100vh;
+  width: 100%;
+  padding-top: 5vh;
+}
+#index_main #index_part_1 > #index_part_1_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#index_main #index_part_1 > #index_part_1_header > h1 {
+  text-align: right;
+  font-size: 2rem;
+}
+#index_main #index_part_1 > #index_part_1_content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_img {
+  position: absolute;
+  right: -20%;
+}
+#index_main #index_part_1 > #index_part_1_content > #index_part_1_img > img {
+  height: 80vh;
 }/*# sourceMappingURL=style.css.map */

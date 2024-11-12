@@ -20,12 +20,13 @@
     @extend .font_def;
 }
 
-$background: #fff2df;
+$background: #fcfcfc;
 $light:#eeeeee;
 $opacity_1: #c7b9a577;
+$dark:#221b15;
 
 #update_text{
-    display: none
+    display: none;
 }
 
 
@@ -43,10 +44,30 @@ body.updating{
         }
     }
 }
-
+html{
+    // height: 100%;
+    overflow-x: hidden;
+}
 
 body{
     background-color: $background;
+    // overflow-x: hidden;
+    
+}
+
+#hero_video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit:cover;
+    object-position: top 20%;
+    overflow-x: hidden;
+    // object-position: bottom;
+    z-index: -1;
+    filter: grayscale(2);
+    mask-image: linear-gradient(#000000,#fff2df,#fff2df00);
 }
 
 
@@ -69,18 +90,21 @@ nav{
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 5;
 
     >#nav_left{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: .5rem;
-        line-height: 100%;
+        line-height: 170%;
+    
         >span{
             @extend .font_head;
+            font-size: 1rem;
         }
         >span:nth-child(1){
-            font-size: 1.6rem;
+            font-size: 2.2rem;
             
         }
 
@@ -89,7 +113,7 @@ nav{
     >#menu_button{
         height: 3rem;
         aspect-ratio: 1/1;
-        background-color: #2d1c00;
+        background-color: $dark;
         color: $light;
         border-radius: 5px;
         display: flex;
@@ -105,9 +129,14 @@ nav{
 
 
 #index_main{
-    overflow: hidden;
+    overflow-x: hidden;
     min-height: 150vh;
-    padding: .5rem;
+    // padding: .5rem;
+
+    .index_part{
+        // overflow-x: hidden;
+    }
+
     #index_part_1{
         height: 100vh;
         width: 100%;
@@ -118,6 +147,7 @@ nav{
             display: flex;
             align-items: center;
             justify-content: center;
+            color: transparent;
             >h1{
                 text-align: right;
                 font-size: 2rem;
@@ -127,19 +157,22 @@ nav{
         >#index_part_1_content{
             width: 100%;
             height: 100%;
-            position: relative;
+            // position: relative;
             
             >#index_part_1_img{
                 position: absolute;
+                top: 30vh;
                 right: -20%;
+                display: inline-block;
                 z-index: 2;
 
                 >img{
-                    height: 80vh;
+                    height: 85vh;
                 }
             }
 
             >#index_part_1_block{
+                display: none;
                 width: 85vw;
                 aspect-ratio: 1/1.1;
                 position: absolute;
@@ -149,7 +182,7 @@ nav{
                 border: 5px solid $opacity_1;
                 border-radius: 5px;
 
-                display: flex;
+                // display: flex;
                 flex-direction: column;
                 justify-content: space-between;
 
@@ -181,6 +214,8 @@ nav{
                         align-items: center;
                         
                         >span{
+                            // color: $light;
+                            opacity: 0;
                             font-size: .7rem;
                             >ion-icon{
                                 font-size: 2rem;

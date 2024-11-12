@@ -30,8 +30,29 @@ body.updating > *#update_text {
   text-align: center;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
-  background-color: #fff2df;
+  background-color: #fcfcfc;
+}
+
+#hero_video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top 20%;
+     object-position: top 20%;
+  overflow-x: hidden;
+  z-index: -1;
+  filter: grayscale(2);
+  -webkit-mask-image: linear-gradient(#000000, #fff2df, rgba(255, 242, 223, 0));
+          mask-image: linear-gradient(#000000, #fff2df, rgba(255, 242, 223, 0));
 }
 
 h1, h2 {
@@ -50,21 +71,25 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 5;
 }
 nav > #nav_left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  line-height: 100%;
+  line-height: 170%;
+}
+nav > #nav_left > span {
+  font-size: 1rem;
 }
 nav > #nav_left > span:nth-child(1) {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
 }
 nav > #menu_button {
   height: 3rem;
   aspect-ratio: 1/1;
-  background-color: #2d1c00;
+  background-color: #221b15;
   color: #eeeeee;
   border-radius: 5px;
   display: flex;
@@ -76,9 +101,8 @@ nav > #menu_button > ion-icon {
 }
 
 #index_main {
-  overflow: hidden;
+  overflow-x: hidden;
   min-height: 150vh;
-  padding: 0.5rem;
 }
 #index_main #index_part_1 {
   height: 100vh;
@@ -89,6 +113,7 @@ nav > #menu_button > ion-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: transparent;
 }
 #index_main #index_part_1 > #index_part_1_header > h1 {
   text-align: right;
@@ -97,17 +122,19 @@ nav > #menu_button > ion-icon {
 #index_main #index_part_1 > #index_part_1_content {
   width: 100%;
   height: 100%;
-  position: relative;
 }
 #index_main #index_part_1 > #index_part_1_content > #index_part_1_img {
   position: absolute;
+  top: 30vh;
   right: -20%;
+  display: inline-block;
   z-index: 2;
 }
 #index_main #index_part_1 > #index_part_1_content > #index_part_1_img > img {
-  height: 80vh;
+  height: 85vh;
 }
 #index_main #index_part_1 > #index_part_1_content > #index_part_1_block {
+  display: none;
   width: 85vw;
   aspect-ratio: 1/1.1;
   position: absolute;
@@ -116,7 +143,6 @@ nav > #menu_button > ion-icon {
   transform: translateX(-50%) translateY(-60%);
   border: 5px solid rgba(199, 185, 165, 0.4666666667);
   border-radius: 5px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -145,6 +171,7 @@ nav > #menu_button > ion-icon {
   align-items: center;
 }
 #index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_lower > div > span {
+  opacity: 0;
   font-size: 0.7rem;
 }
 #index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_lower > div > span > ion-icon {

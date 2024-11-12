@@ -23,6 +23,8 @@
     margin: 0;
     padding: 0;
     @extend .font_def;
+
+    // border: 1px solid red !important;
 }
 
 $background: #f3f3f3;
@@ -61,6 +63,10 @@ body{
     
 }
 
+
+a{
+    text-decoration: none;
+}
 
 
 
@@ -253,12 +259,191 @@ nav{
         }
 
         >p{
-            font-size: 1.5rem;
+            font-size: 1.7rem;
+            font-weight: 500;
             @extend .font_head;
+        }
+
+        >#index_part_2_img{
+            >img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        >#index_part_2_content{
+            display: flex;
+            flex-direction: column;
+
+            >div{
+                // height: 3rem;
+                padding: 2rem 1rem;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid $dark;
+
+                &:nth-child(1){
+                    border-top: 1px solid $dark;
+                }
+
+                >div{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    >span{
+                        line-height: 110%;
+                    }
+
+                    >ion-icon{
+                        font-size: 1.6rem;
+                    }
+                }
+
+                p{
+                    display: none;
+                }
+            }
         }
 
     }
 
+}
+
+
+
+footer{
+    // height: 60vh;
+    background-color: $dark;
+    padding: 2rem 1rem;
+    color: $light;
+
+    >#footer_part_1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        >div{
+            border-top: 1px solid $opacity_1;
+            width: 49%;
+            padding: 1rem 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            >h2{
+                font-style: italic;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            >a{
+                color: $light;
+                font-size: .9rem;
+                font-weight: 300;
+            }
+
+            &:nth-child(1),&:nth-child(3){
+                margin-right: 1%;
+            }
+
+            &:nth-child(3),&:nth-child(4){
+                margin-top: 1.5rem;
+            }
+        }
+    }
+
+    >#footer_part_2{
+        border-top: 1px solid $opacity_1;
+        padding-top: 1rem;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        >#footer_part_2_header{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            >h2{
+                font-style: italic;
+            }
+            
+            >span{
+                font-size: .8rem;
+            }
+        }
+
+        >#form{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            >input,textarea,button{
+                background-color: transparent;
+                padding: .5rem .2rem;
+                border: none;
+                outline: none;
+                color: $light;
+                font-weight: 300;
+                border-bottom: 1px solid $opacity_1;
+            }
+
+            >span{
+                font-size: .7rem;
+            }
+            >button{
+                padding: .5rem 1rem;
+                font-size: 1rem;
+                border: 1px solid $opacity_1;
+                color: #ffffffda;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    >#footer_part_3{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        >a{
+            width: 100%;
+            font-size: .9rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $light;
+            
+            >span{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .7rem;
+                >ion-icon{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        
+        >#footer_img{
+            >img{
+                width: 100%;
+            }
+        }
+
+        >#footer_footer{
+            font-size: .7rem;
+            text-align: justify;
+            font-weight: 300;
+        }
+    }
 }
 
 

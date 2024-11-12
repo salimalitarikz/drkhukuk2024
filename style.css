@@ -64,6 +64,7 @@ nav {
   top: 0;
   left: 0;
   z-index: 5;
+  opacity: 0;
 }
 nav > #nav_left {
   display: flex;
@@ -118,7 +119,7 @@ nav > #menu_button > ion-icon {
 #index_main_2 {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 3rem;
   padding: 1.5rem;
   min-height: 200vh;
 }
@@ -135,15 +136,16 @@ nav > #menu_button > ion-icon {
   justify-content: space-between;
 }
 #index_main_2 > #index_part_1 > #index_part_1_header {
-  padding-top: 13vh;
+  padding-top: 1vh;
 }
 #index_main_2 > #index_part_1 > #index_part_1_header > h1 {
-  font-size: 2.8rem;
+  text-align: center;
+  font-size: 2.6rem;
   font-weight: 500;
   color: #eeeeee;
 }
 #index_main_2 > #index_part_1 > #index_part_1_content {
-  margin-top: 15vh;
+  margin-top: 20vh;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -188,14 +190,16 @@ nav > #menu_button > ion-icon {
   font-size: 2rem;
 }
 #index_main_2 > #index_part_2 > #scrolling_text > h1 {
+  transform: translateX(-1.9rem);
+  width: 100vw;
   display: flex;
   gap: 1rem;
   line-height: 110%;
   font-weight: 300;
-  opacity: 0;
 }
 #index_main_2 > #index_part_2 > #scrolling_text > h1 > span {
   font-style: italic;
+  text-wrap: nowrap;
 }
 #index_main_2 > #index_part_2 > p {
   font-size: 1.7rem;

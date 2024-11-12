@@ -5,11 +5,11 @@
   font-family: "Poppins", sans-serif;
 }
 
-.font_head, #index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper > div > span:nth-child(1), #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2) > span, #index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2), #index_main_2 .content_header, nav > #nav_left > span, h1, h2 {
+.font_head, #index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper > div > span:nth-child(1), #index_main_2 > #index_part_2 > p, #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2) > span, #index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2), #index_main_2 .content_header, nav > #nav_left > span, h1, h2 {
   font-family: "Rob", sans-serif;
 }
 
-.font_sec, #index_main_2 > #index_part_2 > p {
+.font_sec {
   font-family: "FH Total Display - Test Regular", sans-serif;
 }
 

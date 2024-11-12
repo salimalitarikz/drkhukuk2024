@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("f/r/style.css");
-.font_def, * {
+@import url("f/t/style.css");
+.font_def, #index_main_2 > #index_part_2 > #scrolling_text > h1, * {
   font-family: "Poppins", sans-serif;
 }
 
-.font_head, #index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper > div > span:nth-child(1), nav > #nav_left > span, h1, h2 {
+.font_head, #index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper > div > span:nth-child(1), #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2) > span, #index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2), #index_main_2 .content_header, nav > #nav_left > span, h1, h2 {
   font-family: "Rob", sans-serif;
+}
+
+.font_sec, #index_main_2 > #index_part_2 > p {
+  font-family: "FH Total Display - Test Regular", sans-serif;
 }
 
 * {
@@ -35,24 +40,7 @@ html {
 }
 
 body {
-  background-color: #fcfcfc;
-}
-
-#hero_video {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top 20%;
-     object-position: top 20%;
-  overflow-x: hidden;
-  z-index: -1;
-  filter: grayscale(2);
-  -webkit-mask-image: linear-gradient(#000000, #fff2df, rgba(255, 242, 223, 0));
-          mask-image: linear-gradient(#000000, #fff2df, rgba(255, 242, 223, 0));
+  background-color: #f3f3f3;
 }
 
 h1, h2 {
@@ -89,15 +77,124 @@ nav > #nav_left > span:nth-child(1) {
 nav > #menu_button {
   height: 3rem;
   aspect-ratio: 1/1;
-  background-color: #221b15;
+  background-color: #070042;
   color: #eeeeee;
-  border-radius: 5px;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 nav > #menu_button > ion-icon {
   font-size: 1.7rem;
+}
+
+#hero_video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top 20%;
+     object-position: top 20%;
+  overflow-x: hidden;
+  z-index: -1;
+  filter: grayscale(2);
+}
+#hero_video.v2 {
+  -o-object-position: top right;
+     object-position: top right;
+  height: 40vh;
+  filter: grayscale(100%) sepia(100%) brightness(57%) hue-rotate(163deg) saturate(379%) contrast(175%);
+  -webkit-filter: grayscale(100%) sepia(100%) brightness(57%) hue-rotate(163deg) saturate(379%) contrast(175%);
+  -moz-filter: grayscale(100%) sepia(100%) brightness(57%) hue-rotate(163deg) saturate(379%) contrast(175%);
+}
+
+#index_main_2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 1.5rem;
+  min-height: 200vh;
+}
+#index_main_2 .content_header {
+  border-top: 1px solid #070042;
+  padding-top: 1rem;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+#index_main_2 > #index_part_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#index_main_2 > #index_part_1 > #index_part_1_header {
+  padding-top: 13vh;
+}
+#index_main_2 > #index_part_1 > #index_part_1_header > h1 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #eeeeee;
+}
+#index_main_2 > #index_part_1 > #index_part_1_content {
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+#index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2) {
+  font-size: 1.6rem;
+}
+#index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(3) {
+  font-size: 1rem;
+  color: #6e6e6e;
+}
+#index_main_2 > #index_part_1 > #index_part_1_content > div:nth-last-child(1) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+#index_main_2 > #index_part_1 > #index_part_1_content > div:nth-last-child(1) > button {
+  width: 50%;
+  height: 2.6rem;
+  border: 1px solid #070042;
+  padding: 0.5rem 0.5rem;
+  padding-left: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#index_main_2 > #index_part_1 > #index_part_1_content > div:nth-last-child(1) > button > span {
+  line-height: 0%;
+}
+#index_main_2 > #index_part_1 > #index_part_1_content > div:nth-last-child(1) > button > ion-icon {
+  font-size: 1rem;
+}
+#index_main_2 > #index_part_2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#index_main_2 > #index_part_2 > #scrolling_text {
+  font-size: 2rem;
+}
+#index_main_2 > #index_part_2 > #scrolling_text > h1 {
+  display: flex;
+  gap: 1rem;
+  line-height: 110%;
+  font-weight: 300;
+  opacity: 0;
+}
+#index_main_2 > #index_part_2 > #scrolling_text > h1 > span {
+  font-style: italic;
+}
+#index_main_2 > #index_part_2 > p {
+  font-size: 1.5rem;
 }
 
 #index_main {
@@ -127,7 +224,6 @@ nav > #menu_button > ion-icon {
   position: absolute;
   top: 30vh;
   right: -20%;
-  display: inline-block;
   z-index: 2;
 }
 #index_main #index_part_1 > #index_part_1_content > #index_part_1_img > img {

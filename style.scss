@@ -2,9 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 @import url("f/r/style.css");
 @import url("f/t/style.css");
-
 
 
 
@@ -12,7 +13,8 @@
     font-family: "Poppins", sans-serif;
 }
 .font_head{
-    font-family: 'Rob', sans-serif;
+    font-family: 'Cormorant Infant', sans-serif;
+    font-weight: 500 !important;
 }
 .font_sec{
     font-family: 'FH Total Display - Test Regular', sans-serif;
@@ -80,6 +82,8 @@ h1,h2{
 button{
     border: none;
     background-color: transparent;
+    cursor: pointer;
+    transition: .3s;
 }
 
 nav{
@@ -355,51 +359,82 @@ menu{
             width: 100%;
 
             
+          >div:nth-child(2){
 
-            >p{
-                &:nth-child(2){
-                    font-size: 1.6rem;
-                    @extend .font_head;
-                    >span{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            >div:nth-child(1){
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                >p{
+                    &:nth-child(1){
+                        font-size: 1.6rem;
                         @extend .font_head;
+                        >span{
+                            @extend .font_head;
+                        }
+                    }
+    
+                    &:nth-child(3){
+                        font-size: 1rem;
+                        color:$text_gray;
+                        
                     }
                 }
-
-                &:nth-child(3){
-                    font-size: 1rem;
-                    color:$text_gray;
-                    
-                }
             }
+
+           
 
             >div:nth-last-child(1){
                 width: 100%;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: space-around;
                 gap: 1rem;
 
-                >button{
-                    width: 50%;
-                    height: 2.6rem;
-                    border: 1px solid $dark;
-                    padding: .5rem .5rem;
-                    padding-left: .8rem;
+                >div{
+                    width: 100%;
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
-                    background-color: transparent;
-
-                    >span{
-                        line-height: 0%;
+                    justify-content: space-around;
+                    gap: 1rem;
+                    >button{
+                        width: 50%;
+                        height: 2.6rem;
+                        border: 1px solid $dark;
+                        padding: .5rem .5rem;
+                        padding-left: .8rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: transparent;
+    
+                        &:hover{
+                            background-color: $dark;
+                            >span{
+                                color: $background;
+                            }
+                            >ion-icon{
+                                color: $background;
+                            }
+                        }
+    
+                        >span{
+                            line-height: 0%;
+                        }
+    
+                        >ion-icon{
+                            font-size: 1rem;
+                        }
+                        
                     }
-
-                    >ion-icon{
-                        font-size: 1rem;
-                    }
-                    
                 }
             }
+          }
         }
 
     }
@@ -481,6 +516,39 @@ menu{
         }
 
     }
+
+
+
+    @media only screen and (min-width: 900px) {
+        
+        gap: 5rem;
+
+        >#index_part_1{
+            >#index_part_1_content{
+                >div:nth-last-child(1){
+                    flex-direction: row;
+
+                    >div:nth-child(1){
+                        width: 90%;
+
+                        >p:nth-child(1){
+                            font-size: 2.5rem !important;
+                        }
+
+                        >p:nth-child(2){
+                            font-size: 1.3rem !important;
+                        }
+                        
+                    }
+
+                    >div:nth-last-child(1){
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+      }
+    
 
 }
 

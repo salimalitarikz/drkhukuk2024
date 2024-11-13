@@ -119,7 +119,7 @@ menu {
   padding: 1.5rem;
   top: 0;
   left: 0;
-  background-color: #070042;
+  background-color: #eeeeee;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -130,7 +130,7 @@ menu.menu_active {
   transform: translateX(0);
 }
 menu .cls-1 {
-  fill: #fcfcfc !important;
+  fill: #070042 !important;
 }
 menu > #menu_header {
   display: flex;
@@ -138,10 +138,13 @@ menu > #menu_header {
   justify-content: space-between;
 }
 menu > #menu_header > #menu_header_left {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
   height: 2rem;
 }
 menu > #menu_header > #menu_header_left > svg {
-  height: 100%;
+  height: 50px !important;
 }
 menu > #menu_header > #menu_header_right {
   height: 2rem;
@@ -156,14 +159,15 @@ menu > #menu_content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 menu > #menu_content > a {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
-  color: #fcfcfc;
+  color: #070042;
   font-weight: 400;
+  border-bottom: 1px solid #070042;
 }
 menu > #menu_footer {
   height: 20vh;
@@ -174,7 +178,7 @@ menu > #menu_footer {
 }
 menu > #menu_footer > a {
   font-size: 1.1rem;
-  color: #fcfcfc;
+  color: #070042;
 }
 
 #hero_video {
@@ -192,12 +196,12 @@ menu > #menu_footer > a {
   filter: grayscale(2);
 }
 #hero_video.v2 {
-  -o-object-position: top right;
-     object-position: top right;
+  -o-object-position: top left;
+     object-position: top left;
   height: 50vh;
-  filter: grayscale(100%) sepia(100%) brightness(57%) hue-rotate(163deg) saturate(379%) contrast(175%);
-  -webkit-filter: grayscale(100%) sepia(100%) brightness(57%) hue-rotate(163deg) saturate(379%) contrast(175%);
-  -moz-filter: grayscale(100%) sepia(100%) brightness(57%) hue-rotate(163deg) saturate(379%) contrast(175%);
+  filter: grayscale(100%) sepia(100%) brightness(48%) hue-rotate(171deg) saturate(1000%) contrast(110%);
+  -webkit-filter: grayscale(100%) sepia(100%) brightness(48%) hue-rotate(171deg) saturate(1000%) contrast(110%);
+  -moz-filter: grayscale(100%) sepia(100%) brightness(48%) hue-rotate(171deg) saturate(1000%) contrast(110%);
 }
 
 #index_main_2 {
@@ -211,7 +215,7 @@ menu > #menu_footer > a {
   border-top: 1px solid #070042;
   padding-top: 1rem;
   font-style: italic;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 #index_main_2 > #index_part_1 {
   display: flex;

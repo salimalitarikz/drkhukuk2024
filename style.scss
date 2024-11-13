@@ -78,49 +78,77 @@ h1,h2{
 
 button{
     border: none;
+    background-color: transparent;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
+    
     position: sticky;
+    
     top: 0;
     left: 0;
     z-index: 5;
-    opacity: 0;
+    
+    
+    transition: .4s;
+
+    &.nav_active{
+        background-color: $background;
+        border-bottom: 1px solid $dark;
+        opacity: 1;
+
+        
+    }
+
+    &.nav_passive{
+        .cls-1{
+            fill: $dark !important;
+        }
+    }
 
     >#nav_left{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        justify-content: center;
         gap: .5rem;
-        line-height: 170%;
+        line-height: 110%;
     
         >span{
-            @extend .font_head;
-            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            >svg{
+                height: 60%;
+                .cls-1{
+                    fill: $background;
+                }
+            }
         }
-        >span:nth-child(1){
-            font-size: 2.2rem;
-            
-        }
+
 
     }
 
     >#menu_button{
         height: 3rem;
-        aspect-ratio: 1/1;
-        background-color: $dark;
-        color: $light;
+        // aspect-ratio: 1/1;
+        // background-color: $dark;
+        color: $dark;
         border-radius: 3px;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        >ion-icon{
-            font-size: 1.7rem;
+        >svg{
+            height: 60%;
+            .cls-1{
+                fill: $background;
+            }
         }
     }
 
@@ -222,6 +250,7 @@ nav{
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    background-color: transparent;
 
                     >span{
                         line-height: 0%;

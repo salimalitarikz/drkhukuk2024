@@ -28,3 +28,31 @@ window.addEventListener('scroll', function(){
 function toggleMenu() {
     document.getElementById("menu").classList.toggle("menu_active");
 }
+
+
+
+// Tüm <p> etiketlerini seç
+const paragraphs = document.querySelectorAll('p');
+
+// Intersection Observer opsiyonlarını ayarla
+const options = {
+  threshold: .2 // Görünürlüğün %10 olduğunda tetiklenecek
+};
+
+// Intersection Observer callback fonksiyonu
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // <p> etiketine "activated_p" sınıfını ekle
+      entry.target.classList.add('activated_p');
+      // Eğer bir kez eklenmesini istiyorsanız, observe etmeyi bırakabilirsiniz:
+      // observer.unobserve(entry.target);
+    }else{
+      entry.target.classList.remove('activated_p');
+    }
+  });
+};
+
+// Observer oluştur ve paragraf elemanlarını gözlemle
+const observer = new IntersectionObserver(observerCallback, options);
+paragraphs.forEach(paragraph => observer.observe(paragraph));

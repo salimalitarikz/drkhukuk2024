@@ -105,6 +105,9 @@ nav{
     }
 
     &.nav_passive{
+        background-color: $background;
+        border-bottom: 1px solid $dark;
+        opacity: 1;
         .cls-1{
             fill: $dark !important;
         }
@@ -187,11 +190,17 @@ menu{
             display: inline-flex;
             align-items: flex-start;
             flex-direction: column;
-            height: 2rem;
+            gap: .5rem;
+            height: 3.5rem;
 
             >svg{
-                height: 50px !important;
+                height: 50%;
                 // height: 100%;
+            }
+
+            >span{
+                display: inline-block;
+                font-size: .9rem;
             }
         }
 
@@ -287,17 +296,59 @@ menu{
         align-items: center;
         justify-content: space-between;
         >#index_part_1_header{
-            padding-top: 7vh;
+            padding-top: 12vh;
             >h1{
+                position: relative;
                 text-align: center;
                 font-size: 2.6rem;
                 font-weight: 500;
                 color: $background;
+                position: relative;
+                animation: openFromMiddle 1.5s ease-out forwards;
+                height: 7rem;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                clip-path: inset(0px 50% 0px 50%);
+                -webkit-clip-path: inset(0px 50% 0px 50%);
+                >span{
+                    display: inline-block;
+                    position: relative;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @extend .font_head;
+                    text-wrap: nowrap;
+                }
+                
+                
+
+                @keyframes openFromMiddle {
+                    0% {
+                        clip-path: inset(0px 50% 0px 50%);
+                        -webkit-clip-path: inset(0px 50% 0px 50%);
+                        transform: scale(.9);
+                       }
+                       20%{
+                        transform: scale(.9);
+                       }
+
+                       70%{
+                        transform: scale(1);
+                       }
+                      100% {
+                         clip-path: inset(0px 0px 0px 0px);
+                         -webkit-clip-path: inset(0px 0px 0px 0px);
+                         
+                      }
+                }
             }
         }
 
         >#index_part_1_content{
-            margin-top: 30vh;
+            margin-top: 25vh;
             display: flex;
             flex-direction: column;
             gap: 3rem;
@@ -432,6 +483,40 @@ menu{
     }
 
 }
+
+
+
+p{
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        // transform: rotate(180deg);
+        background:linear-gradient(0deg, $background 100% , transparent);
+        transition: 2s;
+    }
+
+    &.activated_p{
+        &::before{
+            animation: p_bef_an 1s linear forwards;
+            @keyframes p_bef_an {
+                0%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+
 
 
 

@@ -23,3 +23,8 @@ window.addEventListener('scroll', function(){
   
 });
 
+
+
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("menu_active");
+}

@@ -5,7 +5,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.font_head, #index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper > div > span:nth-child(1), #index_main_2 > #index_part_2 > p, #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2) > span, #index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2), #index_main_2 .content_header, h1, h2 {
+.font_head, #index_main #index_part_1 > #index_part_1_content > #index_part_1_block > #index_part_1_block_upper > div > span:nth-child(1), #index_main_2 > #index_part_2 > p, #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2) > span, #index_main_2 > #index_part_1 > #index_part_1_content > p:nth-child(2), #index_main_2 .content_header, menu > #menu_content > a, h1, h2 {
   font-family: "Rob", sans-serif;
 }
 
@@ -40,11 +40,12 @@ html {
 }
 
 body {
-  background-color: #f3f3f3;
+  background-color: #fcfcfc;
 }
 
 a {
   text-decoration: none;
+  color: unset;
 }
 
 h1, h2 {
@@ -60,7 +61,7 @@ nav {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   position: sticky;
   top: 0;
   left: 0;
@@ -68,7 +69,7 @@ nav {
   transition: 0.4s;
 }
 nav.nav_active {
-  background-color: #f3f3f3;
+  background-color: #fcfcfc;
   border-bottom: 1px solid #070042;
   opacity: 1;
 }
@@ -93,7 +94,7 @@ nav > #nav_left > span > svg {
   height: 60%;
 }
 nav > #nav_left > span > svg .cls-1 {
-  fill: #f3f3f3;
+  fill: #fcfcfc;
 }
 nav > #menu_button {
   height: 3rem;
@@ -107,7 +108,73 @@ nav > #menu_button > svg {
   height: 60%;
 }
 nav > #menu_button > svg .cls-1 {
-  fill: #f3f3f3;
+  fill: #fcfcfc;
+}
+
+menu {
+  transform: translateX(100%);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  padding: 1.5rem;
+  top: 0;
+  left: 0;
+  background-color: #070042;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 5;
+  transition: 0.5s ease;
+}
+menu.menu_active {
+  transform: translateX(0);
+}
+menu .cls-1 {
+  fill: #fcfcfc !important;
+}
+menu > #menu_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+menu > #menu_header > #menu_header_left {
+  height: 2rem;
+}
+menu > #menu_header > #menu_header_left > svg {
+  height: 100%;
+}
+menu > #menu_header > #menu_header_right {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+menu > #menu_header > #menu_header_right > svg {
+  height: 75%;
+}
+menu > #menu_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+menu > #menu_content > a {
+  text-align: center;
+  font-size: 2rem;
+  color: #fcfcfc;
+  font-weight: 400;
+}
+menu > #menu_footer {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+menu > #menu_footer > a {
+  font-size: 1.1rem;
+  color: #fcfcfc;
 }
 
 #hero_video {
@@ -127,7 +194,7 @@ nav > #menu_button > svg .cls-1 {
 #hero_video.v2 {
   -o-object-position: top right;
      object-position: top right;
-  height: 40vh;
+  height: 50vh;
   filter: grayscale(100%) sepia(100%) brightness(57%) hue-rotate(163deg) saturate(379%) contrast(175%);
   -webkit-filter: grayscale(100%) sepia(100%) brightness(57%) hue-rotate(163deg) saturate(379%) contrast(175%);
   -moz-filter: grayscale(100%) sepia(100%) brightness(57%) hue-rotate(163deg) saturate(379%) contrast(175%);
@@ -153,16 +220,16 @@ nav > #menu_button > svg .cls-1 {
   justify-content: space-between;
 }
 #index_main_2 > #index_part_1 > #index_part_1_header {
-  padding-top: 1vh;
+  padding-top: 7vh;
 }
 #index_main_2 > #index_part_1 > #index_part_1_header > h1 {
   text-align: center;
   font-size: 2.6rem;
   font-weight: 500;
-  color: #eeeeee;
+  color: #fcfcfc;
 }
 #index_main_2 > #index_part_1 > #index_part_1_content {
-  margin-top: 20vh;
+  margin-top: 30vh;
   display: flex;
   flex-direction: column;
   gap: 3rem;

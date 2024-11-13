@@ -7,68 +7,257 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="updatin">
-    <video src="/ui/herovideo.mp4" id="hero_video" autoplay loop muted></video>
+    <video class="v2" src="/ui/herovideo.mp4" id="hero_video" autoplay loop muted></video>
   
-    <nav >
+    <nav id="nav">
         <div id="nav_left">
-            <span>DRK</span>
-            <span>Hukuk & Danışmanlık</span>
+            <span>
+                <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.79 30.39">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <g>
+                    <path class="cls-1" d="M9.28,30.39H0v-.56c1.86,0,2.94-1.64,2.94-4.58V5.09C2.94,2.42,1.9.56,0,.56v-.56h9.28c8.59,0,17.14,2.63,17.14,15.28s-8.55,15.11-17.14,15.11ZM9.28.56h-1.9v29.27h1.9c4.66,0,11.96-.22,11.96-14.55S14.03.56,9.28.56Z"/>
+                    <path class="cls-1" d="M67.79,30.39h-4.62c-4.58,0-5.57-1.3-10.15-7.81-2.46-3.54-4.79-6.6-4.79-6.6l5.44-6.61c2.46-2.89,7.47-8.72,1.04-8.81v-.56h11.87v.56c-3.15,0-5.52,1.04-14.85,12.99,5.05,6.73,10.36,13.86,10.36,13.86,1.98,2.55,5.09,2.42,5.7,2.42v.56Z"/>
+                    <path class="cls-1" d="M44.56,26.03c-2.25-9.45-5.23-9.76-8.07-9.89,4.66-.3,8.03-2.03,8.03-7.9,0-7.21-4.75-8.24-13.34-8.24h-.98v.56h.98c4.62,0,8.59-.17,8.59,7.68s-3.71,7.64-8.59,7.64h-.98v.56h1.67c1.12,0,5.48,0,6.69,4.53,2.46,9.37,1.81,9.41,7.34,9.41h3.28v-.56c-1.12-.09-3.84-.52-4.62-3.8Z"/>
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <!-- <span>Hukuk & Danışmanlık</span> -->
         </div>
 
 
-        <button id="menu_button">
-            <ion-icon name="menu-outline"></ion-icon>
+        <button id="menu_button" onclick="toggleMenu()">
+            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.84 18.16">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <g>
+                        <rect class="cls-1" width="20.84" height="1.44"/>
+                        <rect class="cls-1" y="5.78" width="20.84" height="1.44"/>
+                        <rect class="cls-1" y="11.56" width="20.84" height="1.44"/>
+                      </g>
+                </g>
+              </svg>
         </button>
     </nav>
+
+    <menu id="menu">
+        <div id="menu_header">
+            <div id="menu_header_left">
+                <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.79 30.39">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <g>
+                        <path class="cls-1" d="M9.28,30.39H0v-.56c1.86,0,2.94-1.64,2.94-4.58V5.09C2.94,2.42,1.9.56,0,.56v-.56h9.28c8.59,0,17.14,2.63,17.14,15.28s-8.55,15.11-17.14,15.11ZM9.28.56h-1.9v29.27h1.9c4.66,0,11.96-.22,11.96-14.55S14.03.56,9.28.56Z"/>
+                        <path class="cls-1" d="M67.79,30.39h-4.62c-4.58,0-5.57-1.3-10.15-7.81-2.46-3.54-4.79-6.6-4.79-6.6l5.44-6.61c2.46-2.89,7.47-8.72,1.04-8.81v-.56h11.87v.56c-3.15,0-5.52,1.04-14.85,12.99,5.05,6.73,10.36,13.86,10.36,13.86,1.98,2.55,5.09,2.42,5.7,2.42v.56Z"/>
+                        <path class="cls-1" d="M44.56,26.03c-2.25-9.45-5.23-9.76-8.07-9.89,4.66-.3,8.03-2.03,8.03-7.9,0-7.21-4.75-8.24-13.34-8.24h-.98v.56h.98c4.62,0,8.59-.17,8.59,7.68s-3.71,7.64-8.59,7.64h-.98v.56h1.67c1.12,0,5.48,0,6.69,4.53,2.46,9.37,1.81,9.41,7.34,9.41h3.28v-.56c-1.12-.09-3.84-.52-4.62-3.8Z"/>
+                      </g>
+                    </g>
+                  </svg>
+            </div>
+            <div id="menu_header_right" onclick="toggleMenu()">
+                <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.75 15.75">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <polygon class="cls-1" points="15.75 1.02 14.73 0 7.88 6.86 1.02 0 0 1.02 6.86 7.88 0 14.73 1.02 15.75 7.88 8.89 14.73 15.75 15.75 14.73 8.89 7.88 15.75 1.02"/>
+                    </g>
+                  </svg>
+            </div>
+        </div>
+
+        <div id="menu_content">
+            <a href="">Hakkımızda</a>
+            <a href="">Alanlarımız</a>
+            <a href="">Ekibimiz</a>
+            
+            <a href="">Güncel <br> Çalışmalarımız</a>
+            <a href="">İletişim</a>
+        </div>
+
+        <div id="menu_footer">
+           <a href="#">LinkedIn</a>
+           <a href="#">X</a>
+        </div>
+        
+    </menu>
 
     <div id="update_text">
         Websitesi şuan günelleme almaktadır. Lütfen daha sonra tekrar deneyiniz.
     </div>
 
 
-    <main id="index_main">
+    <main id="index_main_2">
         <section class="index_part" id="index_part_1">
+
             <div id="index_part_1_header">
-                <h1>DRK HUKUK & DANIŞMANLIK BÜROSU</h1>
+                <h1>DRK HUKUK & DANIŞMANLIK</span>
             </div>
 
-            <div id="index_part_1_content">
-                <div id="index_part_1_img">
-                    <img src="/ui/themisgray.png" alt="">
-                </div>
+          <div id="index_part_1_content">
+            <div class="content_header">Hakkımızda</div>
+            <p>
+                <span>Drk Hukuk </span>müvekkillerine yenilikçi ve çağın gerekliliklerine uygun hukuki hizmet sunabilmek misyonu ile İstanbul’da kurulmuştur.
+            </p>
 
-                <div id="index_part_1_block">
-                   <div id="index_part_1_block_upper">
-                        <div>
-                            <!-- <span>250+</span>
-                            <span>mutlu</span>
-                            <span>müşteri</span> -->
-                        </div>
+            <p>
+                 Halihazırda kurumsal ve bireysel tüm müvekkillerinin ulusal ve uluslararası yasa ve mevzuatlara uyum sağlayabilmesi, hukuki problemlerinin titiz bir çalışma ile mümkün olan en kısa sürede çözümlenmesi düsturu ile hareket eden DRK Hukuk & Danışmanlık, alanında deneyimli ve iş disiplini kuvvetli bir ekibe sahiptir.
+            </p>
 
-                        <div>
-                            <!-- <span>93%</span>
-                            <span>başarı</span>
-                            <span>oranı</span> -->
-                        </div>
-                   </div>
-                   <div id="index_part_1_block_lower">
-                        <div>
-                            <span>
-                                <ion-icon name="arrow-down-outline"></ion-icon>
-                            </span>
-                            <span>
-                                Uzman İş Hukuk Avukatları <br>
-                                ve Stratejik Legal Danışmanlar
-                            </span>
-                        </div>
-                   </div>
-                </div>
-
-               
-                
+            <div>
+                <button>
+                    <span>HAKKIMIZDA</span>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+                <button>
+                    <span>EKİBİMİZ</span>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
             </div>
+
+
+          </div>
+        </section>
+
+        <section class="index_part" id="index_part_2">
+            <div id="scrolling_text">
+                <h1>
+                    
+                    <span>Akılda Sanatkarlık</span>
+                </h1>
+            </div>
+
+           <div class="content_header">Deneyimimiz</div>
+            <p>
+                Drk Hukuk müvekkillerine yenilikçi ve çağın gerekliliklerine uygun hukuki hizmet sunabilmek misyonu ile İstanbul’da kurulmuştur.
+            </p>
+
+            <div id="index_part_2_img">
+                <img src="/ui/img1.jpg" alt="">
+            </div>
+
+            <div id="index_part_2_content">
+                <div>
+                    <div>
+                        <span>Şirketler Hukuku</span>
+                        <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                    
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur quo quam sit aliquid? Ea ipsum exercitationem, velit cumque maiores accusamus culpa assumenda adipisci beatae dignissimos.
+                    </p>
+                    
+                </div>
+
+                <div>
+                    <div>
+                        <span>Ceza Hukuku</span>
+                        <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                    
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur quo quam sit aliquid? Ea ipsum exercitationem, velit cumque maiores accusamus culpa assumenda adipisci beatae dignissimos.
+                    </p>
+                    
+                </div>
+
+                <div>
+                    <div>
+                        <span>Sosyal Güvenlik Hukuku</span>
+                        <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                    
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur quo quam sit aliquid? Ea ipsum exercitationem, velit cumque maiores accusamus culpa assumenda adipisci beatae dignissimos.
+                    </p>
+                    
+                </div>
+            </div>
+
+      
         </section>
     </main>
+
+    <footer>
+        <section id="footer_part_1">
+            <div>
+                <h2>Menu</h2>
+                <a href="#">Anasayfa</a>
+                <a href="#">Hakkımızda</a>
+                <a href="#">Ekibimiz</a>
+                <a href="#">Alanlarımız</a>
+                <a href="#">Çalışmalarımız</a>
+            </div>
+            <div>
+                <h2>Deneyim</h2>
+                <a href="#">Şirketler Hukuku</a>
+                <a href="#">İş Hukuku</a>
+                <a href="#">Şirketler Hukuku</a>
+                <a href="#">Veriler Hukuku</a>
+                <a href="#">Ceza Hukuku</a>
+            </div>
+            <div>
+                <h2>İletişim</h2>
+                <a href="#">iletisim@drkhukuk.com</a>
+                <a href="#">+90 546 296 90 33</a>
+                <a href="#">Linkedin</a>
+                <a href="#">X</a>
+            </div>
+            <div>
+                <h2>Misc</h2>
+                <a href="#">Gizlilik Politikası</a>
+                <a href="#">Çerezler Politikası</a>
+            </div>
+        </section>
+
+        <section id="footer_part_2">
+            <div id="footer_part_2_header">
+                <h2>Başvuru</h2>
+                <span>Aşağıdaki formu doldurursanız kısa zamanda geri dönüş sağlayacağız.</span>
+            </div>
+            <form id="form" action="https://api.staticforms.xyz/submit" method="post">
+                <!-- Replace with accesKey sent to your email -->
+                <input type="hidden" name="accessKey" value="ed4d0f4a-92d3-44d2-b5b1-d58d816a830f"> <!-- Required -->
+                <input type="text" name="name" placeholder="İsminiz *"> <!-- Optional -->
+                <input type="text" name="surname" placeholder="Soyisminiz *"> 
+                <input type="text" name="subject" placeholder="Konu"> <!-- Optional -->
+                <input type="text" name="email" placeholder="Mailiniz *"> <!-- Optional -->
+                <input type="text" name="phone" placeholder="Telefon Numaranız *"> <!-- Optional -->
+                <textarea name="message" placeholder="Mesajınız * " rows="1"></textarea> <!-- Optional -->
+                <!-- If you want replyTo to be set to specific email -->
+                <input type="hidden" name="replyTo" value="hello@alitra.net"> <!-- Optional -->
+                <!-- Specify @ as reply to value if you want it to be customers email -->
+                <input type="hidden" name="replyTo" value="@"> <!-- Optional -->
+                <!-- If you want form to redirect to a specific url after submission -->
+                <!-- <input type="hidden" name="redirectTo" value="https://example.com/contact/success"> Optional -->
+                
+                <span>* Zorunlu Alanlar</span>
+                <button type="submit">
+                    <span>Başvuruyu Gönder</span>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+
+                
+            </form>
+    
+
+        </section>
+
+
+        <section id="footer_part_3">
+
+            <a href="alitra.net">
+                <span>Bu website Alitra Studio <br> tarafından yapılmıştır.</span>
+
+                <span>alitra.net <ion-icon name="link-outline"></ion-icon></span>
+            
+            </a>
+            <div id="footer_img">
+                <img src="/ui/img2.jpg" alt="">
+            </div>
+
+            <div id="footer_footer">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum distinctio at necessitatibus? Harum aliquid ea eius vero ab veritatis obcaecati natus suscipit soluta maiores! Deserunt, beatae! Debitis atque harum quaerat, necessitatibus quisquam blanditiis ipsam accusamus neque nemo modi natus cumque minus adipisci. Similique est, quia tempora dolor corrupti vero error praesentium doloremque nostrum rem quibusdam laborum ducimus assumenda molestiae quis.
+                </p>
+            </div>
+        </section>
+    </footer>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

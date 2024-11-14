@@ -25,7 +25,7 @@
     margin: 0;
     padding: 0;
     @extend .font_def;
-
+    -webkit-tap-highlight-color: transparent;
     // border: 1px solid red !important;
 }
 

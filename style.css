@@ -443,6 +443,8 @@ menu > #menu_footer > a {
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  font-size: 0.8rem;
+  color: #6e6e6e;
 }
 #index_main_2 > #index_part_3 > #index_part_3_content > #part_3_articles > .article_div > h2 {
   font-weight: 700 !important;
@@ -478,6 +480,8 @@ menu > #menu_footer > a {
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  font-size: 0.8rem;
+  color: #6e6e6e;
 }
 #index_main_2 > #index_part_4 > #index_part_3_content > #part_3_articles > .article_div > h2 {
   font-weight: 700 !important;

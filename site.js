@@ -69,3 +69,24 @@ servicesCards.forEach(card => {
     card.classList.toggle('services_card_active');
   });
 });
+
+
+
+
+
+// swiper
+
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  speed: 400,
+  spaceBetween: 50,
+
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});

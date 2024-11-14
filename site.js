@@ -81,8 +81,12 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  speed: 400,
+  speed: 700,
   spaceBetween: 50,
+
+  autoplay: {
+    delay: 3000,
+  },
 
 
   // And if we need scrollbar

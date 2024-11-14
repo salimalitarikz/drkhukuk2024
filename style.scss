@@ -291,7 +291,7 @@ menu{
         padding-top: 1rem;
         @extend .font_head;
         font-style: italic;
-        font-size: .9rem;
+        font-size: 1.1rem;
     }
 
     >#index_part_1{
@@ -394,7 +394,7 @@ menu{
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-around;
-                gap: 1rem;
+                gap: 2rem;
 
                 >div{
                     width: 100%;
@@ -482,17 +482,22 @@ menu{
             display: flex;
             flex-direction: column;
 
-            >div{
+            >.services_card{
+                cursor: pointer;
                 // height: 3rem;
                 padding: 2rem 1rem;
+                // height: 5.5rem;
                 width: 100%;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 border-bottom: 1px solid $dark;
+                transition: .6s;
 
                 &:nth-child(1){
                     border-top: 1px solid $dark;
                 }
+                transform: scaleY(1);
 
                 >div{
                     width: 100%;
@@ -510,7 +515,18 @@ menu{
                 }
 
                 p{
+                    padding-top: 2rem;
                     display: none;
+                }
+
+
+                &.services_card_active{
+                    // height: 11rem;
+                    transform: scaleY(1);
+                    
+                    p{
+                        display: inline-block;
+                    }
                 }
             }
         }
@@ -522,30 +538,61 @@ menu{
     @media only screen and (min-width: 900px) {
         
         gap: 5rem;
+        padding: 2rem 5rem;
 
+        .content_header{
+            font-size: 1.5rem;
+        }
         >#index_part_1{
+            
             >#index_part_1_content{
+                
                 >div:nth-last-child(1){
-                    flex-direction: row;
+                    // flex-direction: row;
+                    gap: 7rem;
 
                     >div:nth-child(1){
-                        width: 90%;
+                        width: 60%;
 
                         >p:nth-child(1){
-                            font-size: 2.5rem !important;
+                            font-size: 2.9rem !important;
                         }
 
-                        >p:nth-child(2){
-                            font-size: 1.3rem !important;
-                        }
+                        
                         
                     }
 
                     >div:nth-last-child(1){
                         flex-direction: column;
+                        width: 40%;
+                        float: right;
+                        align-self: flex-end;
+
+                        >p:nth-child(1){
+                            font-size: 1.1rem !important;
+                        }
+                        
                     }
                 }
             }
+        }
+
+
+        >#index_part_2{
+
+            >#scrolling_text{
+                opacity: 0;
+            }
+
+            >p{
+                font-size: 2.5rem;
+                width: 70%;
+                padding-right: 2rem;
+                align-self: flex-end;
+                text-align: left;
+
+            }
+
         }
       }
     

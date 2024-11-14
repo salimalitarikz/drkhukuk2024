@@ -56,3 +56,16 @@ const observerCallback = (entries, observer) => {
 // Observer oluştur ve paragraf elemanlarını gözlemle
 const observer = new IntersectionObserver(observerCallback, options);
 paragraphs.forEach(paragraph => observer.observe(paragraph));
+
+
+
+// Tüm services_card elemanlarını seçiyoruz
+const servicesCards = document.querySelectorAll('.services_card');
+
+// Her bir eleman için olay dinleyicisi ekliyoruz
+servicesCards.forEach(card => {
+  card.addEventListener('click', () => {
+    // Eğer eleman 'services_card_active' sınıfına sahipse, kaldırıyoruz; değilse ekliyoruz
+    card.classList.toggle('services_card_active');
+  });
+});

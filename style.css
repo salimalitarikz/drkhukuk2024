@@ -365,6 +365,13 @@ menu > #menu_footer > a {
   gap: 1rem;
   line-height: 110%;
   font-weight: 300;
+  animation: scrolling_text_an linear;
+  animation-timeline: scroll(root);
+}
+@keyframes scrolling_text_an {
+  to {
+    transform: translateX(-200%);
+  }
 }
 #index_main_2 > #index_part_2 > #scrolling_text > h1 > span {
   font-style: italic;

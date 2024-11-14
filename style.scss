@@ -450,6 +450,7 @@ menu{
 
         >#scrolling_text{
             font-size: 2rem;
+           
             >h1{
                 transform: translateX(-1.9rem);
                 width: 100vw;
@@ -459,6 +460,14 @@ menu{
                 line-height: 110%;
                 font-weight: 300;
                 // opacity: 0;
+
+                animation: scrolling_text_an linear;
+                animation-timeline: scroll(root);
+                @keyframes scrolling_text_an {
+                    to{
+                        transform: translateX(-200%);
+                    }
+                }
                 >span{
                     @extend .font_head;
                     font-style: italic;

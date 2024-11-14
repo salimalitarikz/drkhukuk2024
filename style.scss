@@ -33,6 +33,7 @@ $background: #fcfcfc;
 $light:#eeeeee;
 $text_gray:#6e6e6e;
 $opacity_1: #c7b9a577;
+$opacity_2: #625b52b8;
 $dark:#070042;
 $black:#000000;
 
@@ -63,6 +64,8 @@ html{
     // height: 100%;
     overflow-x: hidden;
     scrollbar-width: 0;
+    height: 100%;
+   
 }
 
 
@@ -71,6 +74,25 @@ body{
     background-color: $background;
     // overflow-x: hidden;
     scrollbar-width: 0;
+    height: 100%;
+    
+
+
+  &:has(#index_main){
+    &::before{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/ui/bg.png');
+        background-position: center;
+        opacity: 0.2; /* Arka plan opaklığını burada ayarlayın */
+        z-index: -1; /* İçeriklerin arkasında kalması için */
+    }
+  }
+
     
 }
 
@@ -967,7 +989,8 @@ footer{
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 20;
 
@@ -1015,9 +1038,32 @@ footer{
     overflow-x: hidden;
     min-height: 200vh;
     // padding: .5rem;
+    padding-top: 10vh;
 
     .index_part{
         // overflow-x: hidden;
+    }
+
+    .content_header_2{
+        width: 90%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        >h1{
+            font-size: 2.4rem;
+            font-weight: 900;
+        }
+        
+        >p{
+            width: 80%;
+            color: $opacity_2;
+        }
     }
 
     #index_decoration_1{
@@ -1127,6 +1173,54 @@ footer{
                 }
             }
            
+        }
+    }
+
+    #index_part_2{
+        margin-top: 25vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+
+        >#part_2_content{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 3rem;
+            padding: 1rem;
+
+            >div{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                align-items: center;
+                text-align: center;
+
+                >.part_2_content_img{
+                    width: 90%;
+                    height: 7rem;
+                    background-color: $opacity_1;
+                   
+
+                    >img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 5px;
+
+                        filter: sepia(100%) brightness(75%) hue-rotate(359deg) saturate(79%) contrast(127%);
+-webkit-filter: sepia(100%) brightness(75%) hue-rotate(359deg) saturate(79%) contrast(127%);
+-moz-filter: sepia(100%) brightness(75%) hue-rotate(359deg) saturate(79%) contrast(127%);
+                    }
+                }
+
+                >p{
+                    width: 90%;
+                    font-size: .9rem;
+                }
+            }
         }
     }
 

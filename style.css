@@ -42,11 +42,25 @@ body.updating > *#update_text {
 html {
   overflow-x: hidden;
   scrollbar-width: 0;
+  height: 100%;
 }
 
 body {
   background-color: #fcfcfc;
   scrollbar-width: 0;
+  height: 100%;
+}
+body:has(#index_main)::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/ui/bg.png");
+  background-position: center;
+  opacity: 0.2; /* Arka plan opaklığını burada ayarlayın */
+  z-index: -1; /* İçeriklerin arkasında kalması için */
 }
 
 a {
@@ -741,7 +755,8 @@ footer > #footer_part_3 > #footer_footer {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 20;
 }
@@ -777,6 +792,26 @@ footer > #footer_part_3 > #footer_footer {
 #index_main {
   overflow-x: hidden;
   min-height: 200vh;
+  padding-top: 10vh;
+}
+#index_main .content_header_2 {
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+#index_main .content_header_2 > h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+#index_main .content_header_2 > p {
+  width: 80%;
+  color: rgba(98, 91, 82, 0.7215686275);
 }
 #index_main #index_decoration_1 {
   position: absolute;
@@ -858,4 +893,44 @@ footer > #footer_part_3 > #footer_footer {
   left: 50%;
   transform: translateX(-50%);
   color: rgba(199, 185, 165, 0.4666666667);
+}
+#index_main #index_part_2 {
+  margin-top: 25vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#index_main #index_part_2 > #part_2_content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem;
+}
+#index_main #index_part_2 > #part_2_content > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+#index_main #index_part_2 > #part_2_content > div > .part_2_content_img {
+  width: 90%;
+  height: 7rem;
+  background-color: rgba(199, 185, 165, 0.4666666667);
+}
+#index_main #index_part_2 > #part_2_content > div > .part_2_content_img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  filter: sepia(100%) brightness(75%) hue-rotate(359deg) saturate(79%) contrast(127%);
+  -webkit-filter: sepia(100%) brightness(75%) hue-rotate(359deg) saturate(79%) contrast(127%);
+  -moz-filter: sepia(100%) brightness(75%) hue-rotate(359deg) saturate(79%) contrast(127%);
+}
+#index_main #index_part_2 > #part_2_content > div > p {
+  width: 90%;
+  font-size: 0.9rem;
 }/*# sourceMappingURL=style.css.map */

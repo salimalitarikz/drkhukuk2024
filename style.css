@@ -859,7 +859,7 @@ p.activated_p::before {
   text-shadow: 0 0 1px #2d1610;
 }
 #menu_2 > #menu_content > div {
-  margin-top: 1rem;
+  margin: 1rem 0;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -932,7 +932,9 @@ p.activated_p::before {
 }
 
 .m_2_i, #index_main #index_part_6 > #part_4_news > .new_div > img, #index_main #index_part_5 > #index_part_5_content > #part_3_articles > .article_div > img, #index_main #index_part_3 > #part_2_content > div > .part_2_content_img > img {
-  filter: grayscale(1);
+  filter: sepia(100%);
+  -webkit-filter: sepia(100%);
+  -moz-filter: sepia(100%);
 }
 
 #index_main {
@@ -995,9 +997,8 @@ p.activated_p::before {
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
-  text-shadow: 0 0 1px #fff9f3;
+  text-shadow: 0 0 1.5px #2d1610;
   color: #2d1610;
-  color: #fff9f3;
 }
 #index_main #index_part_1 > #index_part_1_header > a {
   padding: 0.7rem 1.2rem;

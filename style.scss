@@ -1113,7 +1113,7 @@ p{
         }
 
         >div{
-            margin-top: 1rem;
+            margin: 1rem 0;
             display: flex;
             gap: 1rem;
             align-items: center;
@@ -1204,7 +1204,10 @@ p{
     // filter: grayscale(96%) sepia(69%) brightness(75%) saturate(165%) contrast(102%);
     // -webkit-filter: grayscale(96%) sepia(69%) brightness(75%) saturate(165%) contrast(102%);
     // -moz-filter: grayscale(96%) sepia(69%) brightness(75%) saturate(165%) contrast(102%);
-    filter: grayscale(1);
+    filter: sepia(100%);
+-webkit-filter: sepia(100%);
+-moz-filter: sepia(100%);
+    
 }
 
 #index_main{
@@ -1283,10 +1286,9 @@ p{
                 text-align: center;
                 font-size: 2rem;
                 font-weight: 900;
-                text-shadow: 0 0 1px $sec_back;
+                text-shadow: 0 0 1.5px $secdark;
 
                 color: $secdark;
-                color: $sec_back;
             }
 
             >a{

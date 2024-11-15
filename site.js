@@ -1,4 +1,4 @@
-document.querySelector("#hero_video").playbackRate = 1;
+document.querySelector("#hero_video").playbackRate = .5;
 
 
 // Initial state

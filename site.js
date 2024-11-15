@@ -28,6 +28,12 @@ window.addEventListener('scroll', function(){
 });
 
 
+window.addEventListener('load', function() {
+  setTimeout(() => {
+    document.getElementById('loading_page').classList.add("load_done");
+  }, 1000);
+});
+
 
 function toggleMenu() {
     document.getElementById("menu_1").classList.toggle("menu_active");

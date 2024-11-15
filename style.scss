@@ -297,11 +297,11 @@ button{
     z-index: -3;
    &.v1{
  
-    object-position: top 20%;
+    object-position: top center;
     overflow-x: hidden;
     // object-position: bottom;
     filter: grayscale(1);
-    mask-image: linear-gradient(#000000 80%,#fff2df00 100%);
+    mask-image: linear-gradient(#000000 70%,#fff2df00 100%);
    }
 
     &.v2{
@@ -1037,7 +1037,6 @@ p{
 
 #menu_2{
     position: fixed;
-    
     overflow: hidden;
     left: 0;
    
@@ -1052,6 +1051,19 @@ p{
     top: -10%;
     height: 0;
     opacity: 0;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/ui/bg.png');
+        background-position: center;
+        opacity: 0.4; /* Arka plan opaklığını burada ayarlayın */
+        z-index: -3; /* İçeriklerin arkasında kalması için */
+    }
 
     &.menu_active{
         height: 100vh;
@@ -1076,7 +1088,13 @@ p{
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: .5rem;
+            border: 1px solid $secdark;
+            background-color: $secdark;
+            border-radius: 5px;
             >ion-icon{
+                color: $sec_back;
+                --ionicon-stroke-width: 16px;
                 font-size: 2.2rem;
             }
         }
@@ -1085,13 +1103,63 @@ p{
     >#menu_content{
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
 
         >a{
             @extend .font_head;
             font-size: 1.7rem;
             font-weight: 900;
             text-shadow:  0 0 1px $secdark;
+        }
+
+        >div{
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            border-top: 1px solid $secdark;
+           padding-top: 1.5rem;
+           width: 100%;
+            
+
+            h3{
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                margin-right: 1rem;
+                >span{
+                    @extend .font_head;
+                    font-size: 1.7rem;
+                    font-weight: 900;
+                    text-shadow:  0 0 1px $secdark;
+                    text-wrap: nowrap;
+                }
+                >ion-icon{
+                    // display: inline-block;
+                    --ionicon-stroke-width: 16px;
+                }
+              
+            }
+
+           >div{
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            >a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $opacity_1;
+                color: $secdark;
+                padding: .6rem;
+                border-radius: 5px;
+                >ion-icon{
+                    --ionicon-stroke-width: 20px;
+                    font-size: 1.5rem;
+                }
+               }
+           }
         }
     }
     
@@ -1133,9 +1201,10 @@ p{
 
 
 .m_2_i{
-    filter: grayscale(100%) sepia(100%) brightness(53%) hue-rotate(348deg) saturate(178%) contrast(135%);
-    -webkit-filter: grayscale(100%) sepia(100%) brightness(53%) hue-rotate(348deg) saturate(178%) contrast(135%);
-    -moz-filter: grayscale(100%) sepia(100%) brightness(53%) hue-rotate(348deg) saturate(178%) contrast(135%);
+    // filter: grayscale(96%) sepia(69%) brightness(75%) saturate(165%) contrast(102%);
+    // -webkit-filter: grayscale(96%) sepia(69%) brightness(75%) saturate(165%) contrast(102%);
+    // -moz-filter: grayscale(96%) sepia(69%) brightness(75%) saturate(165%) contrast(102%);
+    filter: grayscale(1);
 }
 
 #index_main{
@@ -1162,6 +1231,7 @@ p{
         >h1{
             font-size: 2.4rem;
             font-weight: 900;
+           
         }
         
         >p{
@@ -1213,9 +1283,10 @@ p{
                 text-align: center;
                 font-size: 2rem;
                 font-weight: 900;
-                text-shadow: 0 0 1px $secdark;
+                text-shadow: 0 0 1px $sec_back;
 
                 color: $secdark;
+                color: $sec_back;
             }
 
             >a{
@@ -1664,7 +1735,7 @@ p{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: $sec_back;
+            background-color: #e2d6d3;
             padding: .5rem 1rem;
             border-radius: 5px;
            span{
@@ -1680,11 +1751,13 @@ p{
                 >span{
                     @extend .font_def;
                     font-weight: 400 !important;
-                    color: $dark;
+                    color: $secdark;
                 }
 
                 >ion-icon{
-                    color:$dark;
+                    font-size: 1.3rem;
+                    --ionicon-stroke-width: 25px;
+                    color: $secdark;
                 }
             }
             

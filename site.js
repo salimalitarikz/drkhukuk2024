@@ -31,7 +31,7 @@ window.addEventListener('scroll', function(){
 window.addEventListener('load', function() {
   setTimeout(() => {
     document.getElementById('loading_page').classList.add("load_done");
-  }, 1000);
+  }, 1800);
 });
 
 
@@ -95,7 +95,7 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  speed: 700,
+  speed: 1000,
   spaceBetween: 50,
 
   autoplay: {

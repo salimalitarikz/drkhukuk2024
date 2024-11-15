@@ -30,7 +30,11 @@ window.addEventListener('scroll', function(){
 
 
 function toggleMenu() {
-    document.getElementById("menu").classList.toggle("menu_active");
+    document.getElementById("menu_1").classList.toggle("menu_active");
+}
+
+function menu2Toggle(){
+  document.getElementById("menu_2").classList.toggle("menu_active");
 }
 
 

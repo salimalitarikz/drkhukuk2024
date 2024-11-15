@@ -7,7 +7,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.font_head, #footer_2 > #footer_part_3 > a span, #index_main #index_part_6 > #part_4_news > .new_div > div > p, #index_main #index_part_2 > #scrolling_text > h1 > span, #index_main #index_part_1 > #index_part_1_header > a, #index_main_2 > #index_part_5 > div:nth-last-child(1) h3, #index_main_2 > #index_part_4 > #index_part_4_content > #part_4_news > .new_div > div > p, #index_main_2 > #index_part_2 > p, #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1), #index_main_2 > #index_part_1 > #index_part_1_header > h1 > span, #index_main_2 .content_header, menu > #menu_content > a, h1, h2 {
+.font_head, #footer_2 > #footer_part_3 > a span, #index_main #index_part_6 > #part_4_news > .new_div > div > p, #index_main #index_part_2 > #scrolling_text > h1 > span, #index_main #index_part_1 > #index_part_1_header > a, #menu_2 > #menu_content > a, #index_main_2 > #index_part_5 > div:nth-last-child(1) h3, #index_main_2 > #index_part_4 > #index_part_4_content > #part_4_news > .new_div > div > p, #index_main_2 > #index_part_2 > p, #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1), #index_main_2 > #index_part_1 > #index_part_1_header > h1 > span, #index_main_2 .content_header, #menu_1 > #menu_content > a, h1, h2 {
   font-family: "Cormorant Infant", sans-serif;
   font-weight: 500 !important;
 }
@@ -138,7 +138,7 @@ button {
   fill: #fcfcfc;
 }
 
-menu {
+#menu_1 {
   transform: translateX(100%);
   width: 100vw;
   height: 100vh;
@@ -153,62 +153,62 @@ menu {
   z-index: 5;
   transition: 0.5s ease;
 }
-menu.menu_active {
+#menu_1.menu_active {
   transform: translateX(0);
 }
-menu .cls-1 {
+#menu_1 .cls-1 {
   fill: #070042 !important;
 }
-menu > #menu_header {
+#menu_1 > #menu_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-menu > #menu_header > #menu_header_left {
+#menu_1 > #menu_header > #menu_header_left {
   display: inline-flex;
   align-items: flex-start;
   flex-direction: column;
   gap: 0.5rem;
   height: 3.5rem;
 }
-menu > #menu_header > #menu_header_left > svg {
+#menu_1 > #menu_header > #menu_header_left > svg {
   height: 50%;
 }
-menu > #menu_header > #menu_header_left > span {
+#menu_1 > #menu_header > #menu_header_left > span {
   display: inline-block;
   font-size: 0.9rem;
 }
-menu > #menu_header > #menu_header_right {
+#menu_1 > #menu_header > #menu_header_right {
   height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-menu > #menu_header > #menu_header_right > svg {
+#menu_1 > #menu_header > #menu_header_right > svg {
   height: 75%;
 }
-menu > #menu_content {
+#menu_1 > #menu_content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
   justify-content: center;
 }
-menu > #menu_content > a {
+#menu_1 > #menu_content > a {
   text-align: left;
   font-size: 2rem;
   color: #070042;
   font-weight: 400;
   border-bottom: 1px solid #070042;
 }
-menu > #menu_footer {
+#menu_1 > #menu_footer {
   height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-menu > #menu_footer > a {
+#menu_1 > #menu_footer > a {
   font-size: 1.1rem;
   color: #070042;
 }
@@ -778,6 +778,7 @@ p.activated_p::before {
   height: 3.3rem;
   aspect-ratio: 1/1;
   background-color: #2d1610;
+  border: 1px solid rgba(98, 91, 82, 0.7215686275);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -787,6 +788,86 @@ p.activated_p::before {
   font-size: 1.8rem;
   color: #fff9f3;
   --ionicon-stroke-width: 15px;
+}
+
+#menu_2 {
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  width: 100vw;
+  background-color: #fff9f3;
+  z-index: 30;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 1s all, 0.3s opacity;
+  top: -10%;
+  height: 0;
+  opacity: 0;
+}
+#menu_2.menu_active {
+  height: 100vh;
+  top: 0;
+  opacity: 1;
+}
+#menu_2 > #menu_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#menu_2 > #menu_header > a {
+  width: 4rem;
+}
+#menu_2 > #menu_header > a > svg {
+  width: 100%;
+}
+#menu_2 > #menu_header > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#menu_2 > #menu_header > button > ion-icon {
+  font-size: 2.2rem;
+}
+#menu_2 > #menu_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#menu_2 > #menu_content > a {
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-shadow: 0 0 1px #2d1610;
+}
+#menu_2 > #menu_footer {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: 4px;
+  gap: 1rem;
+}
+#menu_2 > #menu_footer > img {
+  width: 100%;
+  height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+#menu_2 > #menu_footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#menu_2 > #menu_footer > div > span, #menu_2 > #menu_footer > div a {
+  font-size: 0.9rem;
+  color: #070042;
+}
+#menu_2 > #menu_footer > div > a {
+  text-decoration: underline;
+  text-underline-offset: 1px;
 }
 
 .m_2_i, #index_main #index_part_6 > #part_4_news > .new_div > img, #index_main #index_part_5 > #index_part_5_content > #part_3_articles > .article_div > img, #index_main #index_part_3 > #part_2_content > div > .part_2_content_img > img {

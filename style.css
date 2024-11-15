@@ -3,11 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("f/r/style.css");
 @import url("f/t/style.css");
-.font_def, #index_main #index_part_2 > #scrolling_text > h1, #index_main_2 > #index_part_2 > #scrolling_text > h1, * {
+.font_def, #footer_2 > #footer_part_3 > a span:nth-last-child(1) > span, #index_main #index_part_2 > #scrolling_text > h1, #index_main_2 > #index_part_2 > #scrolling_text > h1, * {
   font-family: "Poppins", sans-serif;
 }
 
-.font_head, #index_main #index_part_6 > #part_4_news > .new_div > div > p, #index_main #index_part_2 > #scrolling_text > h1 > span, #index_main #index_part_1 > #index_part_1_header > a, #index_main_2 > #index_part_5 > div:nth-last-child(1) h3, #index_main_2 > #index_part_4 > #index_part_4_content > #part_4_news > .new_div > div > p, #index_main_2 > #index_part_2 > p, #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1), #index_main_2 > #index_part_1 > #index_part_1_header > h1 > span, #index_main_2 .content_header, menu > #menu_content > a, h1, h2 {
+.font_head, #footer_2 > #footer_part_3 > a span, #index_main #index_part_6 > #part_4_news > .new_div > div > p, #index_main #index_part_2 > #scrolling_text > h1 > span, #index_main #index_part_1 > #index_part_1_header > a, #index_main_2 > #index_part_5 > div:nth-last-child(1) h3, #index_main_2 > #index_part_4 > #index_part_4_content > #part_4_news > .new_div > div > p, #index_main_2 > #index_part_2 > p, #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1), #index_main_2 > #index_part_1 > #index_part_1_header > h1 > span, #index_main_2 .content_header, menu > #menu_content > a, h1, h2 {
   font-family: "Cormorant Infant", sans-serif;
   font-weight: 500 !important;
 }
@@ -775,7 +775,7 @@ p.activated_p::before {
   fill: #2d1610;
 }
 #nav_2 > #menu_button {
-  height: 3rem;
+  height: 3.3rem;
   aspect-ratio: 1/1;
   background-color: #2d1610;
   display: flex;
@@ -784,7 +784,7 @@ p.activated_p::before {
   border-radius: 4px;
 }
 #nav_2 > #menu_button > ion-icon {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   color: #fff9f3;
   --ionicon-stroke-width: 15px;
 }
@@ -1106,4 +1106,145 @@ p.activated_p::before {
   margin-top: 10vh;
   background-color: #2d1610;
   min-height: 50vh;
+  padding: 2rem 1.5rem;
+  color: #fff9f3;
+}
+#footer_2 > #footer_part_1 {
+  display: flex;
+  gap: 1rem;
+}
+#footer_2 > #footer_part_1 > div {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(98, 91, 82, 0.7215686275);
+  width: 50%;
+  color: #fff9f3;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#footer_2 > #footer_part_1 > div > h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+#footer_2 > #footer_part_1 > div > a {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+#footer_2 #footer_part_ad {
+  margin-top: 2rem;
+}
+#footer_2 #footer_part_ad > a {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  border: 1px solid #8e8e8e;
+  border-radius: 3px;
+  background-color: rgba(98, 91, 82, 0.7215686275);
+}
+#footer_2 #footer_part_ad > a > ion-icon {
+  font-size: 1.3rem;
+}
+#footer_2 > #footer_part_2 {
+  border-top: 1px solid rgba(199, 185, 165, 0.4666666667);
+  padding-top: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#footer_2 > #footer_part_2 > #footer_part_2_header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#footer_2 > #footer_part_2 > #footer_part_2_header > h2 {
+  font-style: italic;
+}
+#footer_2 > #footer_part_2 > #footer_part_2_header > span {
+  font-size: 0.8rem;
+}
+#footer_2 > #footer_part_2 > #form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#footer_2 > #footer_part_2 > #form > input, #footer_2 > #footer_part_2 > #form textarea, #footer_2 > #footer_part_2 > #form button {
+  background-color: transparent;
+  padding: 0.5rem 0.2rem;
+  border: none;
+  outline: none;
+  color: #eeeeee;
+  font-weight: 300;
+  border-bottom: 1px solid rgba(199, 185, 165, 0.4666666667);
+}
+#footer_2 > #footer_part_2 > #form > span {
+  font-size: 0.7rem;
+}
+#footer_2 > #footer_part_2 > #form > button {
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border: 1px solid rgba(199, 185, 165, 0.4666666667);
+  color: rgba(255, 255, 255, 0.8549019608);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+#footer_2 > #footer_part_2 > #form > button > ion-icon {
+  font-size: 1.2rem;
+}
+#footer_2 > #footer_part_3 {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#footer_2 > #footer_part_3 > div {
+  width: 100%;
+}
+#footer_2 > #footer_part_3 > div > img {
+  width: 100%;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#footer_2 > #footer_part_3 > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff9f3;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+#footer_2 > #footer_part_3 > a span {
+  font-style: italic;
+  color: #2d1610;
+}
+#footer_2 > #footer_part_3 > a span:nth-last-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#footer_2 > #footer_part_3 > a span:nth-last-child(1) > span {
+  font-weight: 400 !important;
+  color: #070042;
+}
+#footer_2 > #footer_part_3 > a span:nth-last-child(1) > ion-icon {
+  color: #070042;
+}
+#footer_2 > #footer_part_3 > div:nth-last-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer_2 > #footer_part_3 > div:nth-last-child(1) > a {
+  padding: 0.5rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 0.9rem;
+  color: #8e8e8e;
 }/*# sourceMappingURL=style.css.map */

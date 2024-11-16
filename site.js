@@ -1,4 +1,3 @@
-document.querySelector("#hero_video").playbackRate = .5;
 
 
 // Initial state
@@ -6,32 +5,32 @@ var scrollPos = 100;
 // adding scroll event
 
  
-window.addEventListener('scroll', function(){
-  // detects new state and compares it with the new one
+// window.addEventListener('scroll', function(){
+//   // detects new state and compares it with the new one
 
-  let nav = document.getElementById("nav_1");
+//   let nav = document.getElementById("nav_1");
 
-  if (window.scrollY>300) {
-    document.getElementById("nav").classList.add("nav_passive");
-    if ((document.body.getBoundingClientRect()).top < scrollPos)
-        nav.classList.remove("nav_active");
+//   if (window.scrollY>300) {
+//     document.getElementById("nav").classList.add("nav_passive");
+//     if ((document.body.getBoundingClientRect()).top < scrollPos)
+//         nav.classList.remove("nav_active");
     
-        else
-        nav.classList.add("nav_active");
-        // saves the new position for iteration.
-        scrollPos = (document.body.getBoundingClientRect()).top;
-  }else{
-    nav.classList.remove("nav_active");
-    nav.classList.remove("nav_passive");
-  }
+//         else
+//         nav.classList.add("nav_active");
+//         // saves the new position for iteration.
+//         scrollPos = (document.body.getBoundingClientRect()).top;
+//   }else{
+//     nav.classList.remove("nav_active");
+//     nav.classList.remove("nav_passive");
+//   }
   
-});
+// });
 
 
 window.addEventListener('load', function() {
   setTimeout(() => {
     document.getElementById('loading_page').classList.add("load_done");
-  }, 1800);
+  }, 1500);
 });
 
 

@@ -42,9 +42,41 @@ $black:#000000;
 
 $media1:800px;
 
+// $secdark : #010f3b;
+// $sec_back : #f3fcff;
+
+#index_part_1_img{
+    >img{
+        // filter: grayscale(1);
+    }
+}
+
+.m_2_i{
+
+    filter: sepia(100%);
+    -webkit-filter: sepia(100%);
+    -moz-filter: sepia(100%);
+
+    // filter: grayscale(1);
+
+    
+}
+
+
 $secdark : #2d1610;
 $sec_back : #fff9f3;
 
+
+.button_change{
+    &:hover{
+        background-color: $secdark !important;
+        color: $sec_back !important;
+
+        >ion-icon{
+            color: $sec_back !important;
+        }
+    }
+}
 
 #update_text{
     display: none;
@@ -439,15 +471,7 @@ button{
 }
 
 
-.m_2_i{
-    // filter: grayscale(96%) sepia(69%) brightness(75%) saturate(165%) contrast(102%);
-    // -webkit-filter: grayscale(96%) sepia(69%) brightness(75%) saturate(165%) contrast(102%);
-    // -moz-filter: grayscale(96%) sepia(69%) brightness(75%) saturate(165%) contrast(102%);
-    filter: sepia(100%);
--webkit-filter: sepia(100%);
--moz-filter: sepia(100%);
-    
-}
+
 
 #index_main{
     overflow-x: hidden;
@@ -564,6 +588,19 @@ button{
                 display: inline-block;
                 position: relative;
                 border-radius: 3px;
+                z-index: 27;
+                opacity: 0;
+                filter: blur(20px);
+                animation: random_an_1 .5s ease-out forwards;
+                animation-delay: 2s;
+                transition: .3s;
+                @keyframes random_an_1 {
+                    to{opacity: 1; filter: blur(0);}
+                }
+
+                &:hover{
+                    box-shadow: 0 0 10px $secdark;
+                }
                 
            
                 
@@ -1144,9 +1181,27 @@ button{
 
 
         >#about_part_2_content{
+            display: flex;
+            flex-direction: column;
             >p{
                 font-size: 2rem;
                 @extend .font_head;
+            }
+
+        
+            >a{
+                width: 100%;
+                margin-top: 3rem;
+                background-color: $secdark;
+                color: $sec_back;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: .8rem 1rem;
+                border-radius: 5px;
+                >ion-icon{
+                    font-size: 1.4rem;
+                }
             }
         }
         
@@ -1199,6 +1254,7 @@ button{
         justify-content: space-between;
 
         >.team_member_card{
+            cursor: pointer;
             width:45%;
             display: flex;
             flex-direction: column;
@@ -1256,9 +1312,24 @@ button{
         right: 0;
         bottom: 0;
         border-top-left-radius: 2px;
-        padding-top: 3rem;
+        padding-top: 5rem;
         transition: .4s ease-out;
         background-color: $sec_back;
+        overflow-y: scroll;
+
+        &::before{
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/ui/bg.png');
+            background-position: center;
+            opacity: .3; /* Arka plan opaklığını burada ayarlayın */
+            z-index: -1; /* İçeriklerin arkasında kalması için */
+        }
+        
 
         >.contact_close_button{
             display: flex;
@@ -1266,13 +1337,14 @@ button{
             justify-content: center;
             position: absolute;
             right: 2rem;
-            top: 4rem;
+            top: 6rem;
             width: 3rem;
             height: 3rem;
             background-color: $sec_back;
             border-radius: 3px;
             color: $secdark;
             border: 1px solid $secdark;
+            @extend .button_change;
 
             >ion-icon{
                 color: $secdark;
@@ -1309,6 +1381,9 @@ button{
             border: 1px solid $secdark;
             font-weight: 300;
             border-radius: 3px;
+            transition: .2s;
+            @extend .button_change;
+           
         }
 
         >a{
@@ -1347,6 +1422,27 @@ button{
        &.member_contact_active{
         transform: translateX(0);
        }
+    }
+
+    @media only screen and (min-width: $media1) {
+        display: flex;
+        justify-content: space-around;
+        padding: 5rem;
+        padding-top: 13vh;
+        
+        >section{
+            width: 40%;
+        }
+
+        .team_member_contact{
+            padding-top: 2rem;
+            width: 30vw;
+
+            .contact_close_button{
+                top: 3rem;
+            }
+        }
+    
     }
    
 }
@@ -1447,6 +1543,7 @@ button{
                     font-size: .7rem;
                 }
                 >button{
+                    @extend .button_change;
                     padding: 1rem 1rem;
                     font-size: 1rem;
                     border: 1px solid $opacity_3;
@@ -1468,6 +1565,8 @@ button{
 
     @media only screen and (min-width: $media1) {
         display: flex;
+        padding: 5rem;
+        padding-top: 15vh;
 
         >section{
             width: 50%;
@@ -1518,6 +1617,56 @@ button{
 
         }
        }
+    }
+
+
+    @media only screen and (min-width: $media1) {
+        padding: 5rem;
+        padding-top: 17vh;
+
+        >#services_part_1{
+            align-items: center;
+            >p{
+                text-align: center;
+                width: 60%;
+            }
+        }
+
+        >#services_part_2{
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            gap: 5rem;
+
+            >div{
+                width: 20%;
+                flex-direction: column;
+                align-items: center;
+
+
+                >img{
+                    width: 100%;
+                    height: 10rem;
+                }
+
+                >div{
+                    align-items: center;
+                    text-align: center;
+                    >h2{
+                        width: 100%;
+                       
+                    }
+                    >p{
+                        width: 100%;
+                        font-size: .8rem;
+                    }
+                }
+            }
+
+            
+        }
+
     }
 }
 
@@ -2007,6 +2156,7 @@ button{
                       }
                 }
             }
+           
         }
 
         >#index_part_1_content{

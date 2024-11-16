@@ -23,6 +23,20 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.m_2_i, #index_main #index_part_6 > #part_4_news > .new_div > img, #index_main #index_part_5 > #index_part_5_content_des > #part_3_articles > div > .article_div > img, #index_main #index_part_5 > #index_part_5_content_mob > #part_3_articles > .article_div > img, #index_main #index_part_3 > #part_2_content > div > .part_2_content_img > img {
+  filter: sepia(100%);
+  -webkit-filter: sepia(100%);
+  -moz-filter: sepia(100%);
+}
+
+.button_change:hover, #contact_main > #contact_part_2 > #footer_part_2 > #form > button:hover, #team_main .team_member_contact > div > a.v_card_link:hover, #team_main .team_member_contact > .contact_close_button:hover {
+  background-color: #2d1610 !important;
+  color: #fff9f3 !important;
+}
+.button_change:hover > ion-icon, #contact_main > #contact_part_2 > #footer_part_2 > #form > button:hover > ion-icon, #team_main .team_member_contact > div > a.v_card_link:hover > ion-icon, #team_main .team_member_contact > .contact_close_button:hover > ion-icon {
+  color: #fff9f3 !important;
+}
+
 #update_text {
   display: none;
 }
@@ -342,12 +356,6 @@ button {
   text-underline-offset: 1px;
 }
 
-.m_2_i, #index_main #index_part_6 > #part_4_news > .new_div > img, #index_main #index_part_5 > #index_part_5_content_des > #part_3_articles > div > .article_div > img, #index_main #index_part_5 > #index_part_5_content_mob > #part_3_articles > .article_div > img, #index_main #index_part_3 > #part_2_content > div > .part_2_content_img > img {
-  filter: sepia(100%);
-  -webkit-filter: sepia(100%);
-  -moz-filter: sepia(100%);
-}
-
 #index_main {
   overflow-x: hidden;
   min-height: 200vh;
@@ -452,6 +460,21 @@ button {
   display: inline-block;
   position: relative;
   border-radius: 3px;
+  z-index: 27;
+  opacity: 0;
+  filter: blur(20px);
+  animation: random_an_1 0.5s ease-out forwards;
+  animation-delay: 2s;
+  transition: 0.3s;
+}
+@keyframes random_an_1 {
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+#index_main #index_part_1 > #index_part_1_header > a:hover {
+  box-shadow: 0 0 10px #2d1610;
 }
 #index_main #index_part_1 > #index_part_1_content {
   width: 100%;
@@ -889,8 +912,26 @@ button {
     transform: translateX(-100%);
   }
 }
+#about_main > #about_part_2 > #about_part_2_content {
+  display: flex;
+  flex-direction: column;
+}
 #about_main > #about_part_2 > #about_part_2_content > p {
   font-size: 2rem;
+}
+#about_main > #about_part_2 > #about_part_2_content > a {
+  width: 100%;
+  margin-top: 3rem;
+  background-color: #2d1610;
+  color: #fff9f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+}
+#about_main > #about_part_2 > #about_part_2_content > a > ion-icon {
+  font-size: 1.4rem;
 }
 @media only screen and (min-width: 800px) {
   #about_main {
@@ -933,6 +974,7 @@ button {
   justify-content: space-between;
 }
 #team_main > #team_part_2 > .team_member_card {
+  cursor: pointer;
   width: 45%;
   display: flex;
   flex-direction: column;
@@ -981,9 +1023,22 @@ button {
   right: 0;
   bottom: 0;
   border-top-left-radius: 2px;
-  padding-top: 3rem;
+  padding-top: 5rem;
   transition: 0.4s ease-out;
   background-color: #fff9f3;
+  overflow-y: scroll;
+}
+#team_main .team_member_contact::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/ui/bg.png");
+  background-position: center;
+  opacity: 0.3; /* Arka plan opaklığını burada ayarlayın */
+  z-index: -1; /* İçeriklerin arkasında kalması için */
 }
 #team_main .team_member_contact > .contact_close_button {
   display: flex;
@@ -991,7 +1046,7 @@ button {
   justify-content: center;
   position: absolute;
   right: 2rem;
-  top: 4rem;
+  top: 6rem;
   width: 3rem;
   height: 3rem;
   background-color: #fff9f3;
@@ -1029,6 +1084,7 @@ button {
   border: 1px solid #2d1610;
   font-weight: 300;
   border-radius: 3px;
+  transition: 0.2s;
 }
 #team_main .team_member_contact > div > a {
   font-weight: 300;
@@ -1058,6 +1114,24 @@ button {
 }
 #team_main .team_member_contact.member_contact_active {
   transform: translateX(0);
+}
+@media only screen and (min-width: 800px) {
+  #team_main {
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem;
+    padding-top: 13vh;
+  }
+  #team_main > section {
+    width: 40%;
+  }
+  #team_main .team_member_contact {
+    padding-top: 2rem;
+    width: 30vw;
+  }
+  #team_main .team_member_contact .contact_close_button {
+    top: 3rem;
+  }
 }
 
 #contact_main {
@@ -1154,6 +1228,8 @@ button {
 @media only screen and (min-width: 800px) {
   #contact_main {
     display: flex;
+    padding: 5rem;
+    padding-top: 15vh;
   }
   #contact_main > section {
     width: 50%;
@@ -1199,6 +1275,46 @@ button {
 }
 #services_main > #services_part_2 > div > div > p {
   font-size: 0.7rem;
+}
+@media only screen and (min-width: 800px) {
+  #services_main {
+    padding: 5rem;
+    padding-top: 17vh;
+  }
+  #services_main > #services_part_1 {
+    align-items: center;
+  }
+  #services_main > #services_part_1 > p {
+    text-align: center;
+    width: 60%;
+  }
+  #services_main > #services_part_2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  #services_main > #services_part_2 > div {
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+  }
+  #services_main > #services_part_2 > div > img {
+    width: 100%;
+    height: 10rem;
+  }
+  #services_main > #services_part_2 > div > div {
+    align-items: center;
+    text-align: center;
+  }
+  #services_main > #services_part_2 > div > div > h2 {
+    width: 100%;
+  }
+  #services_main > #services_part_2 > div > div > p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
 }
 
 #footer_2 {

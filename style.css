@@ -828,7 +828,6 @@ button {
 }
 #about_main > #about_part_1 > #about_part_1_img > h1 {
   font-size: 2.3rem;
-  text-shadow: 0 0 1px #000;
 }
 #about_main > #about_part_1 > #about_part_1_img > img {
   border-radius: 5px;
@@ -845,7 +844,6 @@ button {
 #about_main > #about_part_1 > #about_part_1_content > p {
   font-size: 2rem;
   font-weight: 600;
-  text-shadow: 0 0 1px #000;
 }
 #about_main > #about_part_1 > #about_part_1_content > p:nth-last-child(1) {
   font-size: 1rem;
@@ -894,6 +892,173 @@ button {
 }
 #about_main > #about_part_2 > #about_part_2_content > p {
   font-size: 2rem;
+}
+@media only screen and (min-width: 800px) {
+  #about_main {
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 3rem;
+  }
+  #about_main #scrolling_text {
+    display: none;
+  }
+  #about_main > section {
+    width: 40% !important;
+  }
+  #about_main > section:nth-last-child(1) {
+    padding-top: 7vh;
+  }
+}
+
+#team_main {
+  padding: 1rem;
+  padding-top: 13vh;
+}
+#team_main > #team_part_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#team_main > #team_part_1 > h1 {
+  font-size: 2.3rem !important;
+}
+#team_main > #team_part_1 > p {
+  font-size: 1rem;
+  color: #6e6e6e;
+}
+#team_main > #team_part_2 {
+  margin-top: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#team_main > #team_part_2 > .team_member_card {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+#team_main > #team_part_2 > .team_member_card > .team_member_card_img {
+  width: 100%;
+  height: 13rem;
+}
+#team_main > #team_part_2 > .team_member_card > .team_member_card_img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+#team_main > #team_part_2 > .team_member_card > h2 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #2d1610;
+}
+#team_main > #team_part_2 > .team_member_card > .team_member_info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+#team_main > #team_part_2 > .team_member_card > .team_member_info > span {
+  font-size: 0.8rem;
+  font-weight: 300 !important;
+}
+#team_main > #team_part_2 > .team_member_card > .team_member_info > div {
+  display: flex;
+  gap: 0.3rem;
+}
+#team_main > #team_part_2 > .team_member_card > .team_member_info > div > ion-icon {
+  font-size: 1.4rem;
+  --ionicon-stroke-width: 15px;
+}
+#team_main .team_member_contact {
+  z-index: 30;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100%);
+  right: 0;
+  bottom: 0;
+  border-top-left-radius: 2px;
+  padding-top: 1rem;
+  transition: 0.4s ease-out;
+  background-color: #fff9f3;
+}
+#team_main .team_member_contact > .contact_close_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff9f3;
+  border-radius: 3px;
+  color: #2d1610;
+  border: 1px solid #2d1610;
+}
+#team_main .team_member_contact > .contact_close_button > ion-icon {
+  color: #2d1610;
+  font-size: 3rem;
+  --ionicon-stroke-width: 12px;
+}
+#team_main .team_member_contact > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  padding: 1rem 2rem;
+}
+#team_main .team_member_contact > div > h2 {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+#team_main .team_member_contact > div > h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+#team_main .team_member_contact > div > a.v_card_link {
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+  padding: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2d1610;
+  font-weight: 300;
+  border-radius: 3px;
+}
+#team_main .team_member_contact > div > a {
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+#team_main .team_member_contact > div > img {
+  width: 100%;
+  height: 17rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 1rem 0;
+}
+#team_main .team_member_contact > div > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+#team_main .team_member_contact > div > div > span:nth-child(1) {
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(199, 185, 165, 0.4666666667);
+  color: #6e6e6e;
+  font-weight: 400;
+}
+#team_main .team_member_contact > div > div > span:nth-last-child(1) {
+  font-size: 0.9rem;
+}
+#team_main .team_member_contact.member_contact_active {
+  transform: translateX(0);
 }
 
 #footer_2 {

@@ -43,6 +43,11 @@ function menu2Toggle(){
 }
 
 
+function toggleMemberContact(idNo) {
+  document.getElementById("member_contact_"+idNo).classList.toggle("member_contact_active");
+}
+
+
 
 // Tüm <p> etiketlerini seç
 const paragraphs = document.querySelectorAll('p');

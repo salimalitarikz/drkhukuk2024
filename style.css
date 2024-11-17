@@ -465,7 +465,7 @@ button {
   filter: blur(20px);
   animation: random_an_1 0.5s ease-out forwards;
   animation-delay: 2s;
-  transition: 0.3s;
+  transition: 0.7s;
 }
 @keyframes random_an_1 {
   to {

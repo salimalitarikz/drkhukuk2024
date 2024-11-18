@@ -32,9 +32,9 @@
 $background: #fcfcfc;
 $light:#eeeeee;
 $text_gray:#6e6e6e;
-$opacity_0: #f4ece198;
-$opacity_1: #c7b9a577;
-$opacity_2: #625b52b8;
+$opacity_0: #e1e4f498;
+$opacity_1: #a5a5c777;
+$opacity_2: #525262b8;
 $opacity_3: #8e8e8e;
 $dark:#070042;
 $black:#000000;
@@ -42,29 +42,29 @@ $black:#000000;
 
 $media1:800px;
 
-// $secdark : #010f3b;
-// $sec_back : #f3fcff;
+$secdark : #010f3b;
+$sec_back : #f3fcff;
 
 #index_part_1_img{
     >img{
-        // filter: grayscale(1);
+        filter: grayscale(1);
     }
 }
 
 .m_2_i{
 
-    filter: sepia(100%);
-    -webkit-filter: sepia(100%);
-    -moz-filter: sepia(100%);
+    // filter: sepia(100%);
+    // -webkit-filter: sepia(100%);
+    // -moz-filter: sepia(100%);
 
-    // filter: grayscale(1);
+    filter: grayscale(1);
 
     
 }
 
 
-$secdark : #2d1610;
-$sec_back : #fff9f3;
+// $secdark : #2d1610;
+// $sec_back : #fff9f3;
 
 
 .button_change{
@@ -174,7 +174,7 @@ button{
     left: 0;
     text-align: center;
     opacity: 1;
-    background-color: #cac3bf;
+    background-color: #bfc0ca;
     z-index: 25;
     transition: 1s allow-discrete, 1s opacity,2s filter;
     transition-delay: 2s display, 1s opacity, 1s filter;
@@ -475,7 +475,6 @@ button{
 
 #index_main{
     overflow-x: hidden;
-    min-height: 200vh;
     // padding: .5rem;
    
     padding-top: 10vh;
@@ -513,7 +512,7 @@ button{
 
     #index_decoration_1{
             position: absolute;
-            height: 140vh;
+            height: 132vh;
             width: 100vw;
             top: 0;
             left: 0;
@@ -1107,19 +1106,13 @@ button{
             flex-direction: column;
             gap: 1rem;
            >p{
-            font-size: 2rem;
-            font-weight: 600;
-            @extend .font_head;
-            // text-shadow: 0 0 1px #000;
+            font-size: 1rem;
+            font-weight:400 !important;
+            // @extend .font_def;
+            color: $text_gray;
+            text-shadow: unset ;
 
-            &:nth-last-child(1){
-                font-size: 1rem;
-                font-weight:400 !important;
-                @extend .font_def;
-                color: $text_gray;
-                text-shadow: unset ;
-            }
-            
+        
            }
             
         }
@@ -1184,8 +1177,11 @@ button{
             display: flex;
             flex-direction: column;
             >p{
-                font-size: 2rem;
-                @extend .font_head;
+                font-size: 1rem;
+                font-weight:400 !important;
+                // @extend .font_def;
+                color: $text_gray;
+                text-shadow: unset ;
             }
 
         
@@ -1274,7 +1270,7 @@ button{
             >h2{
                 margin-top: .5rem;
                 font-size: 1.2rem;
-                font-style: italic;
+                // font-style: italic;
                 color: $secdark;
             }
 
@@ -1363,7 +1359,7 @@ button{
 
         >h2{
             font-size: 1.4rem;
-            font-style: italic;
+            // font-style: italic;
         }
 
         >h3{
@@ -1807,7 +1803,7 @@ button{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                background-color: #e2d6d3;
+                background-color: $light;
                 padding: .5rem 1rem;
                 border-radius: 5px;
                span{
@@ -1863,7 +1859,12 @@ button{
             flex-direction: row;
             gap: 6rem;
             >div{
-                width: 50%;
+                width: 100%;
+
+                img{
+                    object-position: center 45%;
+                    
+                }
 
             }
            

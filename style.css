@@ -3,11 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("f/r/style.css");
 @import url("f/t/style.css");
-.font_def, #index_main_2 > #index_part_2 > #scrolling_text > h1, #footer_2 > div:nth-last-child(1) > #footer_part_3 > a span:nth-last-child(1) > span, #about_main > #about_part_2 > #scrolling_text > h1, #about_main > #about_part_1 > #about_part_1_content > p:nth-last-child(1), #index_main #index_part_2 > #scrolling_text > h1, * {
+.font_def, #index_main_2 > #index_part_2 > #scrolling_text > h1, #footer_2 > div:nth-last-child(1) > #footer_part_3 > a span:nth-last-child(1) > span, #about_main > #about_part_2 > #scrolling_text > h1, #index_main #index_part_2 > #scrolling_text > h1, * {
   font-family: "Poppins", sans-serif;
 }
 
-.font_head, #index_main_2 > #index_part_5 > div:nth-last-child(1) h3, #index_main_2 > #index_part_4 > #index_part_4_content > #part_4_news > .new_div > div > p, #index_main_2 > #index_part_2 > p, #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1), #index_main_2 > #index_part_1 > #index_part_1_header > h1 > span, #index_main_2 .content_header, #menu_1 > #menu_content > a, #footer_2 > div:nth-last-child(1) > #footer_part_3 > a span, #contact_main > #contact_part_1 > div > a > span:nth-child(1), #contact_main > #contact_part_1 > div > div > span:nth-child(1), #about_main > #about_part_2 > #about_part_2_content > p, #about_main > #about_part_2 > #scrolling_text > h1 > span, #about_main > #about_part_1 > #about_part_1_content > p, #index_main #index_part_6 > #part_4_news > .new_div > div > p, #index_main #index_part_2 > #scrolling_text > h1 > span, #index_main #index_part_1 > #index_part_1_header > a, #menu_2 > #menu_content > div h3 > span, #menu_2 > #menu_content > a, h1, h2 {
+.font_head, #index_main_2 > #index_part_5 > div:nth-last-child(1) h3, #index_main_2 > #index_part_4 > #index_part_4_content > #part_4_news > .new_div > div > p, #index_main_2 > #index_part_2 > p, #index_main_2 > #index_part_2 > #scrolling_text > h1 > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > span, #index_main_2 > #index_part_1 > #index_part_1_content > div:nth-child(2) > div:nth-child(1) > p:nth-child(1), #index_main_2 > #index_part_1 > #index_part_1_header > h1 > span, #index_main_2 .content_header, #menu_1 > #menu_content > a, #footer_2 > div:nth-last-child(1) > #footer_part_3 > a span, #contact_main > #contact_part_1 > div > a > span:nth-child(1), #contact_main > #contact_part_1 > div > div > span:nth-child(1), #about_main > #about_part_2 > #scrolling_text > h1 > span, #index_main #index_part_6 > #part_4_news > .new_div > div > p, #index_main #index_part_2 > #scrolling_text > h1 > span, #index_main #index_part_1 > #index_part_1_header > a, #menu_2 > #menu_content > div h3 > span, #menu_2 > #menu_content > a, h1, h2 {
   font-family: "Cormorant Infant", sans-serif;
   font-weight: 500 !important;
 }
@@ -23,18 +23,20 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+#index_part_1_img > img {
+  filter: grayscale(1);
+}
+
 .m_2_i, #index_main #index_part_6 > #part_4_news > .new_div > img, #index_main #index_part_5 > #index_part_5_content_des > #part_3_articles > div > .article_div > img, #index_main #index_part_5 > #index_part_5_content_mob > #part_3_articles > .article_div > img, #index_main #index_part_3 > #part_2_content > div > .part_2_content_img > img {
-  filter: sepia(100%);
-  -webkit-filter: sepia(100%);
-  -moz-filter: sepia(100%);
+  filter: grayscale(1);
 }
 
 .button_change:hover, #contact_main > #contact_part_2 > #footer_part_2 > #form > button:hover, #team_main .team_member_contact > div > a.v_card_link:hover, #team_main .team_member_contact > .contact_close_button:hover {
-  background-color: #2d1610 !important;
-  color: #fff9f3 !important;
+  background-color: #010f3b !important;
+  color: #f3fcff !important;
 }
 .button_change:hover > ion-icon, #contact_main > #contact_part_2 > #footer_part_2 > #form > button:hover > ion-icon, #team_main .team_member_contact > div > a.v_card_link:hover > ion-icon, #team_main .team_member_contact > .contact_close_button:hover > ion-icon {
-  color: #fff9f3 !important;
+  color: #f3fcff !important;
 }
 
 #update_text {
@@ -105,7 +107,7 @@ button {
   left: 0;
   text-align: center;
   opacity: 1;
-  background-color: #cac3bf;
+  background-color: #bfc0ca;
   z-index: 25;
   transition: 1s allow-discrete, 1s opacity, 2s filter;
   transition-delay: 2s display, 1s opacity, 1s filter;
@@ -115,7 +117,7 @@ button {
   width: 7rem;
 }
 #loading_page .cls-1 {
-  fill: #2d1610;
+  fill: #010f3b;
 }
 #loading_page.load_done {
   opacity: 0;
@@ -125,7 +127,7 @@ button {
 #loading_page div:nth-last-child(1) {
   width: 10rem;
   height: 2px;
-  background-color: #2d1610;
+  background-color: #010f3b;
   border-radius: 2px;
   animation: loading_line_an 3s ease-in-out forwards;
 }
@@ -172,7 +174,7 @@ button {
   height: 100%;
 }
 #nav_2 > #nav_left > span > svg .cls-1 {
-  fill: #2d1610;
+  fill: #010f3b;
 }
 #nav_2 #nav_right {
   margin-right: 1rem;
@@ -188,15 +190,15 @@ button {
   border-radius: 5px;
 }
 #nav_2 #nav_right > a:nth-last-child(1) {
-  background-color: #2d1610;
-  color: #fff9f3;
+  background-color: #010f3b;
+  color: #f3fcff;
   font-weight: 300;
 }
 #nav_2 > #menu_button {
   height: 3.3rem;
   aspect-ratio: 1/1;
-  background-color: #2d1610;
-  border: 1px solid rgba(98, 91, 82, 0.7215686275);
+  background-color: #010f3b;
+  border: 1px solid rgba(82, 82, 98, 0.7215686275);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,7 +206,7 @@ button {
 }
 #nav_2 > #menu_button > ion-icon {
   font-size: 1.8rem;
-  color: #fff9f3;
+  color: #f3fcff;
   --ionicon-stroke-width: 15px;
 }
 @media only screen and (min-width: 800px) {
@@ -221,7 +223,7 @@ button {
   overflow: hidden;
   left: 0;
   width: 100vw;
-  background-color: #fff9f3;
+  background-color: #f3fcff;
   z-index: 30;
   padding: 2rem 1rem;
   display: flex;
@@ -265,12 +267,12 @@ button {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
-  border: 1px solid #2d1610;
-  background-color: #2d1610;
+  border: 1px solid #010f3b;
+  background-color: #010f3b;
   border-radius: 5px;
 }
 #menu_2 > #menu_header > button > ion-icon {
-  color: #fff9f3;
+  color: #f3fcff;
   --ionicon-stroke-width: 16px;
   font-size: 2.2rem;
 }
@@ -288,7 +290,7 @@ button {
   display: flex;
   gap: 1rem;
   align-items: center;
-  border-top: 1px solid #2d1610;
+  border-top: 1px solid #010f3b;
   padding-top: 1.5rem;
   width: 100%;
 }
@@ -301,7 +303,7 @@ button {
 #menu_2 > #menu_content > div h3 > span {
   font-size: 1.7rem;
   font-weight: 900;
-  text-shadow: 0 0 1px #2d1610;
+  text-shadow: 0 0 1px #010f3b;
   text-wrap: nowrap;
 }
 #menu_2 > #menu_content > div h3 > ion-icon {
@@ -317,8 +319,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(199, 185, 165, 0.4666666667);
-  color: #2d1610;
+  background-color: rgba(165, 165, 199, 0.4666666667);
+  color: #010f3b;
   padding: 0.6rem;
   border-radius: 5px;
 }
@@ -358,7 +360,6 @@ button {
 
 #index_main {
   overflow-x: hidden;
-  min-height: 200vh;
   padding-top: 10vh;
 }
 @media only screen and (min-width: 800px) {
@@ -383,11 +384,11 @@ button {
 }
 #index_main .content_header_2 > p {
   width: 80%;
-  color: rgba(98, 91, 82, 0.7215686275);
+  color: rgba(82, 82, 98, 0.7215686275);
 }
 #index_main #index_decoration_1 {
   position: absolute;
-  height: 140vh;
+  height: 132vh;
   width: 100vw;
   top: 0;
   left: 0;
@@ -448,15 +449,15 @@ button {
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
-  text-shadow: 0 0 0.5px #2d1610;
-  color: #2d1610;
+  text-shadow: 0 0 0.5px #010f3b;
+  color: #010f3b;
 }
 #index_main #index_part_1 > #index_part_1_header > a {
   padding: 0.7rem 1.2rem;
-  background-color: #2d1610;
-  color: #fff9f3;
+  background-color: #010f3b;
+  color: #f3fcff;
   font-size: 1.2rem;
-  text-shadow: 0 0 1px #fff9f3;
+  text-shadow: 0 0 1px #f3fcff;
   display: inline-block;
   position: relative;
   border-radius: 3px;
@@ -474,7 +475,7 @@ button {
   }
 }
 #index_main #index_part_1 > #index_part_1_header > a:hover {
-  box-shadow: 0 0 10px #2d1610;
+  box-shadow: 0 0 10px #010f3b;
 }
 #index_main #index_part_1 > #index_part_1_content {
   width: 100%;
@@ -488,7 +489,7 @@ button {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  border: 5px solid rgba(199, 185, 165, 0.4666666667);
+  border: 5px solid rgba(165, 165, 199, 0.4666666667);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -508,7 +509,7 @@ button {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(199, 185, 165, 0.4666666667);
+  color: rgba(165, 165, 199, 0.4666666667);
 }
 @media only screen and (min-width: 800px) {
   #index_main #index_part_1 {
@@ -524,7 +525,7 @@ button {
     margin-top: -50vh;
   }
   #index_main #index_part_1 > #index_part_1_content > #index_part_1_text > h1 {
-    color: rgba(244, 236, 225, 0.5960784314);
+    color: rgba(225, 228, 244, 0.5960784314);
   }
 }
 #index_main #index_part_2 {
@@ -539,8 +540,8 @@ button {
 }
 #index_main #index_part_2 > a {
   padding: 0.8rem 1.3rem;
-  background-color: #2d1610;
-  color: #fff9f3;
+  background-color: #010f3b;
+  color: #f3fcff;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -610,7 +611,7 @@ button {
 #index_main #index_part_3 > #part_2_content > div > .part_2_content_img {
   width: 90%;
   height: 7rem;
-  background-color: rgba(199, 185, 165, 0.4666666667);
+  background-color: rgba(165, 165, 199, 0.4666666667);
 }
 #index_main #index_part_3 > #part_2_content > div > .part_2_content_img > img {
   width: 100%;
@@ -657,7 +658,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   top: -1.5rem;
-  color: #2d1610;
+  color: #010f3b;
 }
 #index_main #index_part_5 > #index_part_5_content_mob > #part_3_articles > .article_div > img {
   width: 100%;
@@ -702,7 +703,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   top: -1.5rem;
-  color: #2d1610;
+  color: #010f3b;
 }
 #index_main #index_part_5 > #index_part_5_content_des > #part_3_articles > div > .article_div > img {
   width: 100%;
@@ -804,22 +805,22 @@ button {
   padding: 1rem;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #2d1610;
+  border-bottom: 1px solid #010f3b;
   outline: none;
   font-size: 1.1rem;
 }
 #index_main #index_part_7 > #index_part_7_content > button {
   padding: 1rem;
-  background-color: #2d1610;
+  background-color: #010f3b;
   border-radius: 3px;
-  color: #fff9f3;
+  color: #f3fcff;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
 #index_main #index_part_7 > #index_part_7_content > button > ion-icon {
-  color: #fff9f3;
+  color: #f3fcff;
   font-size: 1.3rem;
 }
 @media only screen and (min-width: 800px) {
@@ -864,10 +865,6 @@ button {
   gap: 1rem;
 }
 #about_main > #about_part_1 > #about_part_1_content > p {
-  font-size: 2rem;
-  font-weight: 600;
-}
-#about_main > #about_part_1 > #about_part_1_content > p:nth-last-child(1) {
   font-size: 1rem;
   font-weight: 400 !important;
   color: #6e6e6e;
@@ -875,8 +872,8 @@ button {
 }
 #about_main > #about_part_1 > a {
   width: 100%;
-  background-color: #2d1610;
-  color: #fff9f3;
+  background-color: #010f3b;
+  color: #f3fcff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -917,13 +914,16 @@ button {
   flex-direction: column;
 }
 #about_main > #about_part_2 > #about_part_2_content > p {
-  font-size: 2rem;
+  font-size: 1rem;
+  font-weight: 400 !important;
+  color: #6e6e6e;
+  text-shadow: unset;
 }
 #about_main > #about_part_2 > #about_part_2_content > a {
   width: 100%;
   margin-top: 3rem;
-  background-color: #2d1610;
-  color: #fff9f3;
+  background-color: #010f3b;
+  color: #f3fcff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -994,8 +994,7 @@ button {
 #team_main > #team_part_2 > .team_member_card > h2 {
   margin-top: 0.5rem;
   font-size: 1.2rem;
-  font-style: italic;
-  color: #2d1610;
+  color: #010f3b;
 }
 #team_main > #team_part_2 > .team_member_card > .team_member_info {
   display: flex;
@@ -1025,7 +1024,7 @@ button {
   border-top-left-radius: 2px;
   padding-top: 5rem;
   transition: 0.4s ease-out;
-  background-color: #fff9f3;
+  background-color: #f3fcff;
   overflow-y: scroll;
 }
 #team_main .team_member_contact::before {
@@ -1049,13 +1048,13 @@ button {
   top: 6rem;
   width: 3rem;
   height: 3rem;
-  background-color: #fff9f3;
+  background-color: #f3fcff;
   border-radius: 3px;
-  color: #2d1610;
-  border: 1px solid #2d1610;
+  color: #010f3b;
+  border: 1px solid #010f3b;
 }
 #team_main .team_member_contact > .contact_close_button > ion-icon {
-  color: #2d1610;
+  color: #010f3b;
   font-size: 3rem;
   --ionicon-stroke-width: 12px;
 }
@@ -1068,7 +1067,6 @@ button {
 }
 #team_main .team_member_contact > div > h2 {
   font-size: 1.4rem;
-  font-style: italic;
 }
 #team_main .team_member_contact > div > h3 {
   font-size: 0.8rem;
@@ -1081,7 +1079,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #2d1610;
+  border: 1px solid #010f3b;
   font-weight: 300;
   border-radius: 3px;
   transition: 0.2s;
@@ -1105,7 +1103,7 @@ button {
 }
 #team_main .team_member_contact > div > div > span:nth-child(1) {
   font-size: 0.8rem;
-  border-bottom: 1px solid rgba(199, 185, 165, 0.4666666667);
+  border-bottom: 1px solid rgba(165, 165, 199, 0.4666666667);
   color: #6e6e6e;
   font-weight: 400;
 }
@@ -1178,7 +1176,7 @@ button {
   font-size: 1.75rem;
 }
 #contact_main > #contact_part_2 > #footer_part_2 {
-  border-top: 1px solid rgba(199, 185, 165, 0.4666666667);
+  border-top: 1px solid rgba(165, 165, 199, 0.4666666667);
   padding-top: 1rem;
   margin-top: 2rem;
   display: flex;
@@ -1216,7 +1214,7 @@ button {
   padding: 1rem 1rem;
   font-size: 1rem;
   border: 1px solid #8e8e8e;
-  color: #2d1610;
+  color: #010f3b;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1319,10 +1317,10 @@ button {
 
 #footer_2 {
   margin-top: 10vh;
-  background-color: #2d1610;
+  background-color: #010f3b;
   min-height: 50vh;
   padding: 2rem 1.5rem;
-  color: #fff9f3;
+  color: #f3fcff;
 }
 #footer_2 > #footer_part_1 {
   display: flex;
@@ -1330,9 +1328,9 @@ button {
 }
 #footer_2 > #footer_part_1 > div {
   padding-top: 1rem;
-  border-top: 1px solid rgba(98, 91, 82, 0.7215686275);
+  border-top: 1px solid rgba(82, 82, 98, 0.7215686275);
   width: 50%;
-  color: #fff9f3;
+  color: #f3fcff;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -1358,7 +1356,7 @@ button {
   justify-content: center;
   border: 1px solid #8e8e8e;
   border-radius: 3px;
-  background-color: rgba(98, 91, 82, 0.7215686275);
+  background-color: rgba(82, 82, 98, 0.7215686275);
 }
 #footer_2 #footer_part_ad > a > ion-icon {
   font-size: 1.3rem;
@@ -1371,7 +1369,7 @@ button {
   width: 100%;
 }
 #footer_2 > div:nth-last-child(1) > #footer_part_2 {
-  border-top: 1px solid rgba(199, 185, 165, 0.4666666667);
+  border-top: 1px solid rgba(165, 165, 199, 0.4666666667);
   padding-top: 1rem;
   margin-top: 2rem;
   display: flex;
@@ -1401,7 +1399,7 @@ button {
   outline: none;
   color: #eeeeee;
   font-weight: 300;
-  border-bottom: 1px solid rgba(199, 185, 165, 0.4666666667);
+  border-bottom: 1px solid rgba(165, 165, 199, 0.4666666667);
 }
 #footer_2 > div:nth-last-child(1) > #footer_part_2 > #form > span {
   font-size: 0.7rem;
@@ -1409,7 +1407,7 @@ button {
 #footer_2 > div:nth-last-child(1) > #footer_part_2 > #form > button {
   padding: 1rem 1rem;
   font-size: 1rem;
-  border: 1px solid rgba(199, 185, 165, 0.4666666667);
+  border: 1px solid rgba(165, 165, 199, 0.4666666667);
   color: rgba(255, 255, 255, 0.8549019608);
   display: flex;
   align-items: center;
@@ -1440,13 +1438,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #e2d6d3;
+  background-color: #eeeeee;
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
 #footer_2 > div:nth-last-child(1) > #footer_part_3 > a span {
   font-style: italic;
-  color: #2d1610;
+  color: #010f3b;
 }
 #footer_2 > div:nth-last-child(1) > #footer_part_3 > a span:nth-last-child(1) {
   display: flex;
@@ -1455,12 +1453,12 @@ button {
 }
 #footer_2 > div:nth-last-child(1) > #footer_part_3 > a span:nth-last-child(1) > span {
   font-weight: 400 !important;
-  color: #2d1610;
+  color: #010f3b;
 }
 #footer_2 > div:nth-last-child(1) > #footer_part_3 > a span:nth-last-child(1) > ion-icon {
   font-size: 1.3rem;
   --ionicon-stroke-width: 25px;
-  color: #2d1610;
+  color: #010f3b;
 }
 #footer_2 > div:nth-last-child(1) > #footer_part_3 > div:nth-last-child(1) {
   display: flex;
@@ -1483,7 +1481,11 @@ button {
     gap: 6rem;
   }
   #footer_2 > div:nth-last-child(1) > div {
-    width: 50%;
+    width: 100%;
+  }
+  #footer_2 > div:nth-last-child(1) > div img {
+    -o-object-position: center 45%;
+       object-position: center 45%;
   }
 }
 
@@ -2058,7 +2060,7 @@ p.activated_p::before {
   justify-content: center;
 }
 #footer_1 > #footer_part_1 > div {
-  border-top: 1px solid rgba(199, 185, 165, 0.4666666667);
+  border-top: 1px solid rgba(165, 165, 199, 0.4666666667);
   width: 49%;
   padding: 1rem 0;
   display: flex;
@@ -2082,7 +2084,7 @@ p.activated_p::before {
   margin-top: 1.5rem;
 }
 #footer_1 > #footer_part_2 {
-  border-top: 1px solid rgba(199, 185, 165, 0.4666666667);
+  border-top: 1px solid rgba(165, 165, 199, 0.4666666667);
   padding-top: 1rem;
   margin-top: 2rem;
   display: flex;
@@ -2112,7 +2114,7 @@ p.activated_p::before {
   outline: none;
   color: #eeeeee;
   font-weight: 300;
-  border-bottom: 1px solid rgba(199, 185, 165, 0.4666666667);
+  border-bottom: 1px solid rgba(165, 165, 199, 0.4666666667);
 }
 #footer_1 > #footer_part_2 > #form > span {
   font-size: 0.7rem;
@@ -2120,7 +2122,7 @@ p.activated_p::before {
 #footer_1 > #footer_part_2 > #form > button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  border: 1px solid rgba(199, 185, 165, 0.4666666667);
+  border: 1px solid rgba(165, 165, 199, 0.4666666667);
   color: rgba(255, 255, 255, 0.8549019608);
   display: flex;
   align-items: center;
